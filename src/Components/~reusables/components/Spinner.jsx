@@ -5,7 +5,7 @@ import { red } from "../variables/index";
 
 const StyledSpinner = styled.div`
   margin: 10rem 0;
-  color=${red}
+  color: ${red};
 `;
 
 export default function Spinner() {
