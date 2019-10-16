@@ -120,5 +120,11 @@ export const SocialMediaStyles = styled.div`
   }
   div {
     padding-right: 2rem;
+    @media (max-width: ${tabletMaxWidth}){
+      padding-right: 5rem;
+    }
+    @media (max-width: ${mobileMAxWidth}){
+      padding-right: 0.5rem;
+    }
   }
 `;
