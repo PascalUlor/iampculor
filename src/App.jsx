@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import ContextProvider from "./Provider";
 import coverImage from './Components/~reusables/assets/images/home-bg.jpg';
 import Spinner from './Components/~reusables/components/Spinner';
-const LandingPage = React.lazy(()=> import('./Components/views/LandingPage'));
+import MobileNav from './Components/~reusables/components/MobileNav';
+const LandingPage = React.lazy(()=> import('./Components/views/LandingPage/LandingPage'));
 
 const MainArea = styled.div`
 background: url(${coverImage}) top center no-repeat #bababa
@@ -14,15 +15,15 @@ function App() {
   return (
     <Router>
     <React.Suspense fallback={<Spinner />}>
-    <MainArea>
     <ContextProvider>
+    <MainArea>
+    <MobileNav/>
     <Switch>
     <Route exact path="/" component={LandingPage} />
     </Switch>
-    </ContextProvider>
     </MainArea>
+    </ContextProvider>
     </React.Suspense>
-    
     </Router>
   );
 }

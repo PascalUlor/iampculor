@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tabletMaxWidth, white } from "../variables/index";
+import { tabletMaxWidth, mobileMAxWidth, white } from "../variables/index";
 
 export const MainContainer = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const Container = styled.div`
     padding: 0rem;
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: ${mobileMAxWidth}) {
     width: 100%;
     border: 1px solid transparent;
   }
@@ -45,8 +45,13 @@ export const StyledSidebar = styled.aside`
     flex: 3;
   }
 
+  @media screen and (max-width: ${mobileMAxWidth}) {
+    width: 15rem;
+  }
 
-  @media (max-width: 770px) {
+
+  @media (max-width: ${tabletMaxWidth}) {
+    /* display: none; */
     position: fixed;
     overflow: hidden;
     transform: translateX(-22rem);

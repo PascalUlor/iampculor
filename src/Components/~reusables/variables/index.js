@@ -10,8 +10,7 @@ export {
   lightGrey,
   white,
   dark,
-  purple,
-//   rgb_red
+  purple //   rgb_red
 } from "./colors";
 
 //====== FONT FAMILY ======//
@@ -31,7 +30,7 @@ export {
 } from "./font-sizes";
 
 //= ===== MEDIA QUERY VARIABLES ======//
-export { tabletMaxWidth } from "./media-query";
+export { tabletMaxWidth, mobileMAxWidth, deskTopMaxWidth } from "./media-query";
 
 //= ===== SPACING VARIABLES ======//
 export {
