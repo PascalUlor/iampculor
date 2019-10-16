@@ -5,6 +5,7 @@ import ContextProvider from "./Provider";
 import coverImage from './Components/~reusables/assets/images/home-bg.jpg';
 import Spinner from './Components/~reusables/components/Spinner';
 import MobileNav from './Components/~reusables/components/MobileNav';
+import Portfolio from './Components/views/Portfolio/Portfolio';
 const LandingPage = React.lazy(()=> import('./Components/views/LandingPage/LandingPage'));
 
 const MainArea = styled.div`
@@ -20,6 +21,7 @@ function App() {
     <MobileNav/>
     <Switch>
     <Route exact path="/" component={LandingPage} />
+    <Route exact path="/projects" component={Portfolio}/>
     </Switch>
     </MainArea>
     </ContextProvider>
