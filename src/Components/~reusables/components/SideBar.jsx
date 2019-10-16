@@ -3,6 +3,7 @@ import ProfileImage from './ProfileImage';
 import SideNavItem from './SideNavItem';
 import { sidebarIcons, sidebarTexts } from '../assets/icons/icons';
 import { StyledSidebar } from '../atoms/DashBoardLayoutStyles';
+import SocialMedia from './SocialMedia';
 import { MyContext } from '../../../Provider';
 import pascal from '../assets/images/pascal.jpg';
 
@@ -34,13 +35,16 @@ class SidebarContainer extends React.Component {
                 path="/experience"	
               />
 
-              <div id="logout" role="presentation" onClick={context.logout}>
                 <SideNavItem
                   text={sidebarTexts.contact}
                   icon={sidebarIcons.contact}
                   path="/contact"
                 />
-              </div>
+
+              <SocialMedia
+              text={'Get in touch'}
+              icon={sidebarIcons.contact}>
+              </SocialMedia>
             </div>
             <div className="empty-div" />
           </StyledSidebar>

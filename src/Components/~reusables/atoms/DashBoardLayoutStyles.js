@@ -91,12 +91,34 @@ export const StyledNavItem = styled.div`
     border-bottom: 1px solid #cfedfe;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgba(255,255,255,.6);
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.4rem;
   }
 
   &:hover a {
     color: ${white};
-    /* background: #dbf2ff; */
+  }
+`;
+
+export const SocialMediaStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 1.4rem;
+    margin-top: 5rem;
+    border-bottom: 1px solid #cfedfe;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4rem;
+
+  span.label {
+    display: flex;
+    width: 100%;
+  }
+  div {
+    padding-right: 2rem;
   }
 `;

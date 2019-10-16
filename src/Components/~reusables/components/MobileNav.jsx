@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Navbar, Social, NavItems } from "../atoms/MobileNavStyles";
+import { Navbar, NavItems } from "../atoms/MobileNavStyles";
 import { MyContext } from "../../../Provider";
+import MediaIcons from "./MediaIcons";
 
 class MobileNav extends Component {
   render() {
@@ -9,17 +10,7 @@ class MobileNav extends Component {
         {context => (
           <Navbar>
             <NavItems>
-              <Social>
-                <a rel="me" href='https://www.linkedin.com/in/pascal-ulor/' title="linkedin">
-                <i className="fab fa-linkedin"/>
-                </a>
-                <a rel="me" href='https://github.com/PascalUlor' title="github">
-                <i className="fab fa-github-square"/>
-                </a>
-                <a rel="me" href='https://twitter.com/pc_codes' title="github">
-                <i className="fab fa-twitter-square"/>
-                </a>
-              </Social>
+              <MediaIcons/>
               <i
                 className="fas fa-bars"
                 role="presentation"
