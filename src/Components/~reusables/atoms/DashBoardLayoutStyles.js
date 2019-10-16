@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tabletMaxWidth, white } from "../variables/index";
+import { tabletMaxWidth, mobileMAxWidth, white } from "../variables/index";
 
 export const MainContainer = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const Container = styled.div`
     padding: 0rem;
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: ${mobileMAxWidth}) {
     width: 100%;
     border: 1px solid transparent;
   }
@@ -45,8 +45,13 @@ export const StyledSidebar = styled.aside`
     flex: 3;
   }
 
+  @media screen and (max-width: ${mobileMAxWidth}) {
+    width: 15rem;
+  }
 
-  @media (max-width: 770px) {
+
+  @media (max-width: ${tabletMaxWidth}) {
+    /* display: none; */
     position: fixed;
     overflow: hidden;
     transform: translateX(-22rem);
@@ -86,12 +91,40 @@ export const StyledNavItem = styled.div`
     border-bottom: 1px solid #cfedfe;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgba(255,255,255,.6);
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.4rem;
   }
 
   &:hover a {
     color: ${white};
-    /* background: #dbf2ff; */
+  }
+`;
+
+export const SocialMediaStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 1.4rem;
+    margin-top: 5rem;
+    border-bottom: 1px solid #cfedfe;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4rem;
+
+  span.label {
+    display: flex;
+    width: 100%;
+  }
+  div {
+    padding-right: 2rem;
+    @media (max-width: ${tabletMaxWidth}){
+      padding-right: 5rem;
+    }
+    @media (max-width: ${mobileMAxWidth}){
+      padding-right: 0.5rem;
+    }
   }
 `;
