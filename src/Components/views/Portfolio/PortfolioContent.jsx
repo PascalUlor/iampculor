@@ -3,6 +3,8 @@ import styled from "styled-components";
 import CardItem from "./CardItem";
 import ATF from "../../~reusables/assets/images/Sample Survey.gif";
 import Droom from "../../~reusables/assets/images/droomapp.jpeg";
+import Politico from "../../~reusables/assets/images/politico.gif";
+import Insatclone from "../../~reusables/assets/images/instaclone.gif";
 import Divider from "../../~reusables/atoms/Divider";
 // import {
 //   white,
@@ -39,6 +41,24 @@ const PortfolioContent = () => {
                 techlist={["Firebase", "React"]}
               />
               <Divider />
+              <CardItem
+                date={"May 2019"}
+                image={Insatclone}
+                title={"Instagram Clone"}
+                details={"My App"}
+                shortdeet={"Tinder like job seeking application"}
+                techlist={["Firebase", "React"]}
+              />
+              <Divider />
+              <CardItem
+                date={"Feb 2019"}
+                image={Politico}
+                title={"Politico App"}
+                details={"My App"}
+                shortdeet={"Tinder like job seeking application"}
+                techlist={["Firebase", "React"]}
+              />
+              <Divider />
             </ListItem>
           </ProjectList>
         </TimeLine>
@@ -56,10 +76,8 @@ const Container = styled.div`
   left: 0;
   right: 0;
   position: relative;
-  /* z-index: 1; */
   -webkit-font-smoothing: antialiased;
   background: #f4f4f4;
-  /* max-width: 850px; */
   max-height: 100vh;
 `;
 
@@ -67,7 +85,6 @@ const PortfolioLayout = styled.div`
   max-height: 100vh;
   max-width: 1400px;
   padding: 50px;
-  /* position: fixed; */
 `;
 
 const Title = styled.h1`
@@ -85,22 +102,6 @@ const TimeLine = styled.div`
   margin-left: -50px;
 `;
 
-const ProjectDate = styled.div`
-  @media screen and (min-width: 568px) {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 130px;
-    padding: 30px 15px;
-    color: #999;
-    text-align: right;
-    font-style: italic;
-    line-height: 30px;
-    border-right: 1px solid #ddd;
-  }
-`;
-
 const ProjectList = styled.ul`
   margin: 0;
   padding: 0;
@@ -110,7 +111,6 @@ const ProjectList = styled.ul`
 const ListItem = styled.li`
   display: block;
   margin: 0;
-  /* padding:  0; */
   padding-left: 2rem;
   position: relative;
   overflow: hidden;
