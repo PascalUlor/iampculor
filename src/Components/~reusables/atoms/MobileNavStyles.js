@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import {
   red,
-  mobileMAxWidth,
+  mobileMaxWidth,
   tabletMaxWidth,
   deskTopMaxWidth,
   white,
   smallSpace,
-  heading4
+  heading4,
+  mediumMaxWidth
 } from "../variables";
 
 export const Navbar = styled.nav`
@@ -32,7 +33,7 @@ export const Navbar = styled.nav`
     display: flex;
   }
 
-  @media (max-width: ${mobileMAxWidth}) {
+  @media (max-width: ${mobileMaxWidth}) {
     display: flex;
     width: 100%;
   }
@@ -55,12 +56,19 @@ export const NavItems = styled.div`
 export const Social = styled.div`
   float: left;
   margin-top: 0.5rem;
+  @media (max-width: ${mediumMaxWidth}) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   a {
     color: rgba(255, 255, 255, 0.6);
     padding: 0;
-    margin-right: 0.5em;
+    margin-right: 0.8em;
     font-size: ${heading4};
     display: inline-block;
     cursor: pointer;
+    i {
+      font-size: 2rem;
+    }
   }
 `;

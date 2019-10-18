@@ -27,36 +27,60 @@ const PortfolioContent = () => {
                 date={"Sept 2019"}
                 image={ATF}
                 title={"Anonymous Team Feedback"}
-                details={"My App"}
-                shortdeet={"Get feedbacks fast"}
-                techlist={["GraphQL", "React"]}
+                details={`This application was developed to allow members of a team to 
+                  give feedback anonymously to their teammates`}
+                shortdeet={"Technologies"}
+                techlist={[
+                  { name: "GraphQL", link: "any" },
+                  { name: "React", link: "any" },
+                  { name: "express", link: "any" },
+                  { name: "sequelize", link: "any" },
+                  { name: "postgresql", link: "any" },
+                  { name: "d3 js", link: "any" },
+                  { name: "Jwt", link: "any" },
+                  { name: "Apollo server", link: "any" }
+                ]}
               />
               <Divider />
               <CardItem
                 date={"July 2019"}
                 image={Droom}
                 title={"Droom"}
-                details={"My App"}
-                shortdeet={"Tinder like job seeking application"}
-                techlist={["Firebase", "React"]}
+                details={`Droom was designed to match candidates
+                and companies based on simple swipe gestures like Tinder`}
+                shortdeet={"Technologies"}
+                techlist={[
+                  { name: "Firebase", link: "any" },
+                  { name: "React", link: "any" }
+                ]}
               />
               <Divider />
               <CardItem
                 date={"May 2019"}
                 image={Insatclone}
                 title={"Instagram Clone"}
-                details={"My App"}
-                shortdeet={"Tinder like job seeking application"}
-                techlist={["Firebase", "React"]}
+                details={"A pet project I built for fun to try out some new features of react"}
+                shortdeet={"Technologies"}
+                techlist={[
+                  { name: "React", link: "any" },
+                  { name: "express", link: "any" }
+                ]}
               />
               <Divider />
               <CardItem
                 date={"Feb 2019"}
                 image={Politico}
                 title={"Politico App"}
-                details={"My App"}
-                shortdeet={"Tinder like job seeking application"}
-                techlist={["Firebase", "React"]}
+                details={`POLITICO is a full-stack vanilla JavaScript application that enables citizens to give their mandate 
+                to politicians running for different government offices`}
+                shortdeet={"Technologiesn"}
+                techlist={[
+                  { name: "express", link: "any" },
+                  { name: "multer js", link: "any" },
+                  { name: "postgresql", link: "any" },
+                  { name: "node mailer", link: "any" },
+                  { name: "Jwt", link: "any" }
+                ]}
               />
               <Divider />
             </ListItem>

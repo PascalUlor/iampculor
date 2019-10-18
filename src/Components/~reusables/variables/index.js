@@ -30,7 +30,7 @@ export {
 } from "./font-sizes";
 
 //= ===== MEDIA QUERY VARIABLES ======//
-export { tabletMaxWidth, mobileMAxWidth, deskTopMaxWidth } from "./media-query";
+export { tabletMaxWidth, mobileMaxWidth, deskTopMaxWidth, mediumMaxWidth, largeWidth } from "./media-query";
 
 //= ===== SPACING VARIABLES ======//
 export {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tabletMaxWidth, mobileMAxWidth, white } from "../variables/index";
+import { tabletMaxWidth, mobileMaxWidth, white, mediumMaxWidth } from "../variables/index";
 
 export const MainContainer = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const Container = styled.div`
     padding: 0rem;
   }
 
-  @media (max-width: ${mobileMAxWidth}) {
+  @media (max-width: ${mobileMaxWidth}) {
     width: 100%;
     border: 1px solid transparent;
   }
@@ -41,11 +41,11 @@ export const StyledSidebar = styled.aside`
   /* background: ${white}; */
   z-index: 100;
 
-  @media (max-width: 960px) {
+  /* @media (max-width: ${mediumMaxWidth}) {
     flex: 3;
-  }
+  } */
 
-  @media screen and (max-width: ${mobileMAxWidth}) {
+  @media screen and (max-width: ${mobileMaxWidth}) {
     width: 15rem;
   }
 
@@ -105,14 +105,14 @@ export const SocialMediaStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    width: 100%;
-    padding: 1rem;
-    padding-left: 1.4rem;
-    margin-top: 5rem;
-    border-bottom: 1px solid #cfedfe;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.4rem;
+  width: 100%;
+  padding: 1rem;
+  padding-left: 1.4rem;
+  margin-top: 5rem;
+  border-bottom: 1px solid #cfedfe;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4rem;
 
   span.label {
     display: flex;
@@ -120,10 +120,10 @@ export const SocialMediaStyles = styled.div`
   }
   div {
     padding-right: 2rem;
-    @media (max-width: ${tabletMaxWidth}){
+    @media (max-width: ${tabletMaxWidth}) {
       padding-right: 5rem;
     }
-    @media (max-width: ${mobileMAxWidth}){
+    @media (max-width: ${mobileMaxWidth}) {
       padding-right: 0.5rem;
     }
   }

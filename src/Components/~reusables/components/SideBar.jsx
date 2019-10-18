@@ -1,23 +1,19 @@
-import React from 'react';
-import ProfileImage from './ProfileImage';
-import SideNavItem from './SideNavItem';
-import { sidebarIcons, sidebarTexts } from '../assets/icons/icons';
-import { StyledSidebar } from '../atoms/DashBoardLayoutStyles';
-import SocialMedia from './SocialMedia';
-import { MyContext } from '../../../Provider';
-import pascal from '../assets/images/pascal.jpg';
+import React from "react";
+import ProfileImage from "./ProfileImage";
+import SideNavItem from "./SideNavItem";
+import { sidebarIcons, sidebarTexts } from "../assets/icons/icons";
+import { StyledSidebar } from "../atoms/DashBoardLayoutStyles";
+import SocialMedia from "./SocialMedia";
+import { MyContext } from "../../../Provider";
+import pascal from "../assets/images/pascal.jpg";
 
 class SidebarContainer extends React.Component {
-
   render() {
     return (
       <MyContext.Consumer>
-        {(context) => (
-          <StyledSidebar className={context.sidebarOpen ? 'active' : ''}>
-            <ProfileImage
-              name={'Pascal Ulor'}
-              image={pascal}
-            />
+        {context => (
+          <StyledSidebar className={context.sidebarOpen ? "active" : ""}>
+            <ProfileImage name={"Pascal Ulor"} image={pascal} path="/" />
             <div
               className="nav-items"
               role="presentation"
@@ -29,22 +25,22 @@ class SidebarContainer extends React.Component {
                 path="/projects"
               />
 
-              <SideNavItem	
-                text={sidebarTexts.experience}	
-                icon={sidebarIcons.experience}	
-                path="/experience"	
+              <SideNavItem
+                text={sidebarTexts.experience}
+                icon={sidebarIcons.experience}
+                path="/experience"
               />
 
-                <SideNavItem
-                  text={sidebarTexts.contact}
-                  icon={sidebarIcons.contact}
-                  path="/contact"
-                />
+              <SideNavItem
+                text={sidebarTexts.contact}
+                icon={sidebarIcons.contact}
+                path="/contact"
+              />
 
               <SocialMedia
-              text={'Get in touch'}
-              icon={sidebarIcons.contact}>
-              </SocialMedia>
+                text={"Get in touch"}
+                icon={sidebarIcons.contact}
+              ></SocialMedia>
             </div>
             <div className="empty-div" />
           </StyledSidebar>

@@ -1,22 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { tabletMaxWidth, mobileMAxWidth } from "../../~reusables/variables";
+import { tabletMaxWidth, mobileMaxWidth, largeWidth } from "../../~reusables/variables";
 
-const CardItem = ({ date, image, title, details, shortdeet, techlist }) => {
+const CardItem = ({ image, title, details, shortdeet, techlist }) => {
   return (
     <Card>
-      <span className="date">{date}</span>
+      {/* <span className="date">{date}</span> */}
       <Content>
         <Description>
           <StyledDetails>
             <ProjectTitle>{title}</ProjectTitle>
-            <ShortDeet>{shortdeet}</ShortDeet>
             <br />
             {details}
+            <br /><br />
+            <ShortDeet>{shortdeet}</ShortDeet>
             {techlist && (
               <DetailedList>
-                {techlist.map(tech => {
-                  return <ListItem>{tech}</ListItem>;
+                {techlist.map((tech, i) => {
+                  return <ListItem key={i}><a href={tech.link}>{tech.name}</a></ListItem>;
                 })}
               </DetailedList>
             )}
@@ -45,7 +46,7 @@ const Card = styled.div`
     margin: 2rem auto;
   }
 
-  @media (max-width: ${mobileMAxWidth}) {
+  @media (max-width: ${mobileMaxWidth}) {
     margin: 2rem auto;
   }
 
@@ -60,7 +61,7 @@ const Content = styled.div`
     margin: 2rem auto;
   }
 
-  @media (max-width: ${mobileMAxWidth}) {
+  @media (max-width: ${mobileMaxWidth}) {
     flex-direction: column;
     width: 100%;
     margin: 2rem auto;
@@ -80,7 +81,7 @@ const Description = styled.div`
     margin: 0 auto;
   }
 
-  @media (max-width: ${mobileMAxWidth}) {
+  @media (max-width: ${mobileMaxWidth}) {
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -89,13 +90,15 @@ const Description = styled.div`
   }
 `;
 
-const StyledDetails = styled.p`
+const StyledDetails = styled.div`
   padding: 5px;
 `;
 
 const ShortDeet = styled.strong`
   font-style: italic;
   font-weight: 500;
+  text-transform: uppercase;
+}
 `;
 
 const ProjectTitle = styled.div`
@@ -119,7 +122,7 @@ const Demo = styled.div`
     width: 100%;
     height: 100%;
   }
-  @media (max-width: 1400px) {
+  @media (max-width: ${largeWidth}) {
     width: 100%;
     margin-top: 2rem;
   }
@@ -131,7 +134,7 @@ const Demo = styled.div`
     margin: 0 auto;
   }
 
-  @media (max-width: ${mobileMAxWidth}) {
+  @media (max-width: ${mobileMaxWidth}) {
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -147,10 +150,18 @@ const DetailedList = styled.ul`
 `;
 
 const ListItem = styled.li`
-  display: block;
+  display: inline-block;
   margin: 0;
-  padding-left: 2rem;
+  padding-left: 1rem;
   position: relative;
   overflow: hidden;
+  a {
+    display: inline-block;
+    background-color: rgba(175,34,34,.8);
+    color: #FFF;
+    padding: 4px 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
 `;
 export default CardItem;

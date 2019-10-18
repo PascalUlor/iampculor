@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { white, heading5, tabletMaxWidth, mobileMAxWidth, deskTopMaxWidth } from "../../~reusables/variables";
+import { white, heading5, tabletMaxWidth, mobileMaxWidth, deskTopMaxWidth } from "../../~reusables/variables";
 
 const ContentArea = () => {
   return (
@@ -41,7 +41,7 @@ const Container = styled.div`
   @media screen and (max-width: ${tabletMaxWidth}) {
     font-size: 8px;
   }
-  @media screen and (max-width: ${mobileMAxWidth}) {
+  @media screen and (max-width: ${mobileMaxWidth}) {
     font-size: 7px;
   }
 `;
