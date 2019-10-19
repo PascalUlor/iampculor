@@ -4,10 +4,11 @@ import { NavLink } from 'react-router-dom';
 import {
   tabletMaxWidth,
   mobileMaxWidth,
-  largeWidth
+  largeWidth,
+  extraLargeWidth
 } from "../../~reusables/variables";
 
-const MySection = ({ image, title, details, shortdeet, techlist, path, imh }) => {
+const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, imh }) => {
   return (
     <Card>
       {/* <span className="date">{date}</span> */}
@@ -16,7 +17,10 @@ const MySection = ({ image, title, details, shortdeet, techlist, path, imh }) =>
           <StyledDetails>
             <ProjectTitle>{title}</ProjectTitle>
             <br />
-            {details}
+            {line1}
+            <br />
+            <br />
+            {line2}
             <br />
             <br />
             <ShortDeet>{shortdeet}</ShortDeet>
@@ -35,9 +39,8 @@ const MySection = ({ image, title, details, shortdeet, techlist, path, imh }) =>
         </Description>
         <MyImage>
         {path && <NavLink to={path}>
-        <img src={image} height={5} alt="" />
+        <img src={image} alt="" />
         </NavLink>}
-         
         </MyImage>
       </Content>
     </Card>
@@ -128,15 +131,16 @@ const ProjectTitle = styled.div`
 const MyImage = styled.div`
   padding: 5px;
   width: 50%;
-  height: 10px;
-  margin: 10rem auto;
+  margin: 5px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   img {
-    width: 100%;
-    height: 100%;
+    border-radius: inherit;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
   }
   @media (max-width: ${largeWidth}) {
     width: 100%;
@@ -157,6 +161,9 @@ const MyImage = styled.div`
     padding: 3px;
     margin: 0 auto;
   }
+  @media (min-width: ${extraLargeWidth}) {
+    width: 50%;
+  }
 `;
 
 const DetailedList = styled.ul`
@@ -175,9 +182,8 @@ const ListItem = styled.li`
     display: inline-block;
     background-color: rgba(175, 34, 34, 0.8);
     color: #fff;
-    padding: 4px 10px;
-    font-size: 13px;
-    text-transform: uppercase;
+    padding: 4px 8px;
+    font-size: 1.5rem;
   }
 `;
 export default MySection;
