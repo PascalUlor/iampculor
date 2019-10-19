@@ -69,6 +69,12 @@ export const Social = styled.div`
     cursor: pointer;
     i {
       font-size: 2rem;
+      transition: transform 0.25s ease-in;
+      margin: 0 auto;
+    }
+    &:hover i {
+      color: ${white};
+      transform: scale(1.5);
     }
   }
 `;

@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { tabletMaxWidth, mobileMaxWidth, largeWidth } from "../../~reusables/variables";
+import {
+  tabletMaxWidth,
+  mobileMaxWidth,
+  largeWidth
+} from "../../~reusables/variables";
 
 const CardItem = ({ image, title, details, shortdeet, techlist }) => {
   return (
@@ -12,12 +16,17 @@ const CardItem = ({ image, title, details, shortdeet, techlist }) => {
             <ProjectTitle>{title}</ProjectTitle>
             <br />
             {details}
-            <br /><br />
+            <br />
+            <br />
             <ShortDeet>{shortdeet}</ShortDeet>
             {techlist && (
               <DetailedList>
                 {techlist.map((tech, i) => {
-                  return <ListItem key={i}><a href={tech.link}>{tech.name}</a></ListItem>;
+                  return (
+                    <ListItem key={i}>
+                      <a href={tech.link}>{tech.name}</a>
+                    </ListItem>
+                  );
                 })}
               </DetailedList>
             )}
@@ -49,7 +58,6 @@ const Card = styled.div`
   @media (max-width: ${mobileMaxWidth}) {
     margin: 2rem auto;
   }
-
 `;
 
 const Content = styled.div`
@@ -98,7 +106,6 @@ const ShortDeet = styled.strong`
   font-style: italic;
   font-weight: 500;
   text-transform: uppercase;
-}
 `;
 
 const ProjectTitle = styled.div`
@@ -157,11 +164,11 @@ const ListItem = styled.li`
   overflow: hidden;
   a {
     display: inline-block;
-    background-color: rgba(175,34,34,.8);
-    color: #FFF;
+    background-color: rgba(175, 34, 34, 0.8);
+    color: #fff;
     padding: 4px 10px;
     font-size: 13px;
     text-transform: uppercase;
-}
+  }
 `;
 export default CardItem;

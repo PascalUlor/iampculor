@@ -91,12 +91,15 @@ export const StyledNavItem = styled.div`
     border-bottom: 1px solid #cfedfe;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
+    /* color: rgba(255, 255, 255, 0.6); */
+    color: ${white};
     line-height: 1.4rem;
+    font-weight: 500;
   }
 
   &:hover a {
-    color: ${white};
+    /* color: ${white}; */
+    color: rgba(255, 255, 255, 0.6);
   }
 `;
 

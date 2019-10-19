@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import CardItem from "./CardItem";
-import ATF from "../../~reusables/assets/images/Sample Survey.gif";
+import AnonymousTeamFeedBack from "../../~reusables/assets/images/Sample Survey.gif";
 import Droom from "../../~reusables/assets/images/droomapp.jpeg";
 import Politico from "../../~reusables/assets/images/politico.gif";
 import Insatclone from "../../~reusables/assets/images/instaclone.gif";
 import Divider from "../../~reusables/atoms/Divider";
+import { LinkButton } from '../../~reusables/atoms/Buttons';
 // import {
 //   white,
 //   heading5,
@@ -18,14 +19,15 @@ const PortfolioContent = () => {
   return (
     <Container>
       <PortfolioLayout>
-        <Title>My Projects</Title>
-        <p>Below are some of the projects I've worked on.</p>
+        {/* <Title>My Projects</Title>
+        <p>Below are some of the projects I've worked on.</p> */}
+        <BackButton className="btn" to="/">←</BackButton>
         <TimeLine>
           <ProjectList>
             <ListItem>
               <CardItem
                 date={"Sept 2019"}
-                image={ATF}
+                image={AnonymousTeamFeedBack}
                 title={"Anonymous Team Feedback"}
                 details={`This application was developed to allow members of a team to 
                   give feedback anonymously to their teammates`}
@@ -111,15 +113,15 @@ const PortfolioLayout = styled.div`
   padding: 50px;
 `;
 
-const Title = styled.h1`
-  line-height: 1;
-  margin-bottom: 15px;
-  color: #555;
-  font-size: 36px;
-  font-weight: 400;
-  text-transform: uppercase;
-  -webkit-font-smoothing: antialiased;
-`;
+// const Title = styled.h1`
+//   line-height: 1;
+//   margin-bottom: 15px;
+//   color: #555;
+//   font-size: 36px;
+//   font-weight: 400;
+//   text-transform: uppercase;
+//   -webkit-font-smoothing: antialiased;
+// `;
 
 const TimeLine = styled.div`
   font-size: 16px;
@@ -145,6 +147,12 @@ const ListItem = styled.li`
       margin-top: 10px;
     }
   }
+`;
+
+const BackButton = styled(LinkButton)`
+  font-size: 1.6rem;
+  margin: 1rem 0 0 1rem;
+  padding: 0 1rem;
 `;
 
 export default PortfolioContent;
