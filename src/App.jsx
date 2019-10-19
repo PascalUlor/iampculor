@@ -4,13 +4,16 @@ import styled from 'styled-components';
 import ContextProvider from "./Provider";
 import coverImage from './Components/~reusables/assets/images/home-bg.jpg';
 import Spinner from './Components/~reusables/components/Spinner';
-import MobileNav from './Components/~reusables/components/MobileNav';
-import Portfolio from './Components/views/Portfolio/Portfolio';
-import AboutPage from './Components/views/About/AboutPage';
 const LandingPage = React.lazy(()=> import('./Components/views/LandingPage/LandingPage'));
+const Portfolio = React.lazy(()=> import('./Components/views/Portfolio/Portfolio'));
+const AboutPage = React.lazy(()=> import('./Components/views/About/AboutPage'));
+const MobileNav = React.lazy(()=> import('./Components/~reusables/components/MobileNav'));
 
 const MainArea = styled.div`
-background: url(${coverImage}) top center no-repeat #bababa
+background: url(${coverImage}) top center/cover no-repeat #bababa;
+width: 100vw;
+  min-height: 86.3vh;
+  position: relative;
 `;
 
 function App() {

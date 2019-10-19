@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { white, heading5, tabletMaxWidth, mobileMaxWidth, deskTopMaxWidth } from "../../~reusables/variables";
+import { white, heading5, tabletMaxWidth, mobileMaxWidth, deskTopMaxWidth, extraLargeWidth } from "../../~reusables/variables";
 
 const ContentArea = () => {
   return (

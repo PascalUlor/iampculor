@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tabletMaxWidth, mobileMaxWidth, white, mediumMaxWidth } from "../variables/index";
+import { tabletMaxWidth, mobileMaxWidth, white, extraLargeWidth } from "../variables/index";
 
 export const MainContainer = styled.div`
   display: flex;
@@ -18,6 +18,9 @@ export const Container = styled.div`
   -ms-overflow-style: none; // IE 10+
   scrollbar-width: none;
   margin: 0 auto;
+  @media (min-width: ${extraLargeWidth}) {
+    max-width: 100vw;
+  }
   @media (max-width: 700px) {
     width: 100% !important;
     padding: 0rem;
@@ -41,9 +44,6 @@ export const StyledSidebar = styled.aside`
   /* background: ${white}; */
   z-index: 100;
 
-  /* @media (max-width: ${mediumMaxWidth}) {
-    flex: 3;
-  } */
 
   @media screen and (max-width: ${mobileMaxWidth}) {
     width: 15rem;

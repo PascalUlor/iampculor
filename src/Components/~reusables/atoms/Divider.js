@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tabletMaxWidth, mobileMaxWidth, red } from "../../~reusables/variables";
+import { tabletMaxWidth, mobileMaxWidth, red, extraLargeWidth } from "../../~reusables/variables";
 
 export default styled.div`
   width: ${props => (props.size ? `${props.size / 4}%` : "20%")};
@@ -17,5 +17,10 @@ export default styled.div`
     width: ${props => (props.size ? `${props.size / 4}%` : "100%")};
     margin: ${props =>
       props.size ? `${props.size}px auto ${props.size}px` : "300px auto 30px"};
+  }
+  @media (min-width: ${extraLargeWidth}) {
+    width: ${props => (props.size ? `${props.size / 4}%` : "100%")};
+    margin: ${props =>
+      props.size ? `${props.size}px auto ${props.size}px` : "20rem auto 30px"};
   }
 `;

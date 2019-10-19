@@ -4,7 +4,8 @@ import {
   heading5,
   tabletMaxWidth,
   mobileMaxWidth,
-  deskTopMaxWidth
+  deskTopMaxWidth,
+  extraLargeWidth
 } from "../../~reusables/variables";
 import { LinkButton } from "../../~reusables/atoms/Buttons";
 
@@ -20,12 +21,20 @@ export const ContentContainer = styled.div`
   -webkit-font-smoothing: antialiased;
   background: #f4f4f4;
   max-height: 100vh;
+  @media (min-width: ${extraLargeWidth}) {
+    min-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+  }
 `;
 
 export const Layout = styled.div`
   max-height: 100vh;
   max-width: 1400px;
   padding: 50px;
+  @media (min-width: ${extraLargeWidth}) {
+    max-width: 100vw;
+  }
 `;
 
 export const Inners = styled.div`

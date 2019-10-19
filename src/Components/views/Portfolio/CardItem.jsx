@@ -4,7 +4,8 @@ import { NavLink } from 'react-router-dom';
 import {
   tabletMaxWidth,
   mobileMaxWidth,
-  largeWidth
+  largeWidth,
+  extraLargeWidth
 } from "../../~reusables/variables";
 
 const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
@@ -156,6 +157,9 @@ const Demo = styled.div`
     width: 100%;
     padding: 3px;
     margin: 0 auto;
+  }
+  @media (min-width: ${extraLargeWidth}) {
+    width: 50%;
   }
 `;
 
