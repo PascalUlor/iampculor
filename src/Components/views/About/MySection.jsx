@@ -7,7 +7,7 @@ import {
   largeWidth
 } from "../../~reusables/variables";
 
-const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
+const MySection = ({ image, title, details, shortdeet, techlist, path, imh }) => {
   return (
     <Card>
       {/* <span className="date">{date}</span> */}
@@ -33,12 +33,12 @@ const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
             )}
           </StyledDetails>
         </Description>
-        <Demo>
+        <MyImage>
         {path && <NavLink to={path}>
-        <img src={image} alt="" />
+        <img src={image} height={5} alt="" />
         </NavLink>}
          
-        </Demo>
+        </MyImage>
       </Content>
     </Card>
   );
@@ -125,16 +125,16 @@ const ProjectTitle = styled.div`
   -webkit-font-smoothing: antialiased;
 `;
 
-const Demo = styled.div`
+const MyImage = styled.div`
   padding: 5px;
   width: 50%;
-  margin: 5px auto;
+  height: 10px;
+  margin: 10rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   img {
-    border-radius: inherit;
     width: 100%;
     height: 100%;
   }
@@ -180,4 +180,4 @@ const ListItem = styled.li`
     text-transform: uppercase;
   }
 `;
-export default CardItem;
+export default MySection;

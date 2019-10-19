@@ -20,15 +20,15 @@ class SidebarContainer extends React.Component {
               onClick={context.toggleSidebar}
             >
               <SideNavItem
-                text={sidebarTexts.portfolio}
-                icon={sidebarIcons.portfolio}
-                path="/projects"
+                text={sidebarTexts.about}
+                icon={sidebarIcons.about}
+                path="/about"
               />
 
               <SideNavItem
-                text={sidebarTexts.experience}
-                icon={sidebarIcons.experience}
-                path="/experience"
+                text={sidebarTexts.portfolio}
+                icon={sidebarIcons.portfolio}
+                path="/projects"
               />
 
               <SideNavItem
