@@ -35,9 +35,9 @@ const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
           </StyledDetails>
         </Description>
         <Demo>
-        {path && <NavLink to={path}>
+        {path && <a href={path}>
         <img src={image} alt="" />
-        </NavLink>}
+        </a>}
          
         </Demo>
       </Content>
