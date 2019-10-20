@@ -106,6 +106,14 @@ const Description = styled.div`
     padding: 3px;
     margin: 0 auto;
   }
+  @media (max-width: 1402px){
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem auto;
+    margin-bottom: calc(100vh - 40rem);
+}
 `;
 
 const StyledDetails = styled.div`
@@ -139,6 +147,9 @@ const MyImage = styled.div`
     width: 300px;
     height: 300px;
     object-fit: cover;
+    /* @media (max-width: 1402px){
+
+    } */
   }
   @media (max-width: ${largeWidth}) {
     width: 100%;
@@ -159,6 +170,14 @@ const MyImage = styled.div`
     padding: 3px;
     margin: 0 auto;
   }
+  @media (max-width: 1402px){
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin: 2rem auto;
+}
   @media (min-width: ${extraLargeWidth}) {
     width: 50%;
   }

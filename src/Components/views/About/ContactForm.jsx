@@ -51,6 +51,9 @@ const FormContainer = styled.div`
     width: 100%;
     margin: 50rem 1rem;
   }
+  @media (max-width: 1402px){
+    margin-top: calc(100vh - 40rem);
+}
   `;
 
 
