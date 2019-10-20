@@ -35,9 +35,9 @@ const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
           </StyledDetails>
         </Description>
         <Demo>
-        {path && <NavLink to={path}>
+        {path && <a href={path}>
         <img src={image} alt="" />
-        </NavLink>}
+        </a>}
          
         </Demo>
       </Content>
@@ -175,6 +175,7 @@ const ListItem = styled.li`
   padding-left: 1rem;
   position: relative;
   overflow: hidden;
+  font-weight: 500;
   a {
     display: inline-block;
     background-color: rgba(175, 34, 34, 0.8);

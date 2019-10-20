@@ -1,5 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+
+import { Icon, InlineIcon } from '@iconify/react';
+import nodejsIcon from '@iconify/icons-logos/nodejs';
+import reactIcon from '@iconify/icons-logos/react';
+import javascriptIcon from '@iconify/icons-logos/javascript';
+import jqueryIcon from '@iconify/icons-logos/jquery';
+import expressIcon from '@iconify/icons-logos/express';
+
+
+import pythonIcon from '@iconify/icons-logos/python';
+import graphqlIcon from '@iconify/icons-logos/graphql';
+import postgresqlIcon from '@iconify/icons-logos/postgresql';
+import mongodbIcon from '@iconify/icons-logos/mongodb';
+
+import mysqlIcon from '@iconify/icons-logos/mysql';
+import d3Icon from '@iconify/icons-logos/d3';
+import gitIcon from '@iconify/icons-logos/git-icon';
+import azureIcon from '@iconify/icons-logos/azure';
+import herokuIcon from '@iconify/icons-logos/heroku-icon';
+import bootstrapIcon from '@iconify/icons-logos/bootstrap';
+import wordpressIcon from '@iconify/icons-logos/wordpress-icon';
+
+import apollostackIcon from '@iconify/icons-logos/apollostack';
+import firebaseIcon from '@iconify/icons-logos/firebase';
+import knexIcon from '@iconify/icons-logos/knex';
+import sequelizeIcon from '@iconify/icons-logos/sequelize';
+import netlifyIcon from '@iconify/icons-logos/netlify';
 import CardItem from "./CardItem";
 import AnonymousTeamFeedBack from "../../~reusables/assets/images/Sample Survey.gif";
 import Droom from "../../~reusables/assets/images/droomapp.jpeg";
@@ -7,13 +34,6 @@ import Politico from "../../~reusables/assets/images/politico.gif";
 import Insatclone from "../../~reusables/assets/images/instaclone.gif";
 import Divider from "../../~reusables/atoms/Divider";
 import ContentLayout from "../../~reusables/components/ContentLayout";
-// import {
-//   white,
-//   heading5,
-//   tabletMaxWidth,
-//   mobileMAxWidth,
-//   deskTopMaxWidth
-// } from "../../~reusables/variables";
 
 const PortfolioContent = () => {
   return (
@@ -28,14 +48,23 @@ const PortfolioContent = () => {
                   give feedback anonymously to their teammates`}
               shortdeet={"Technologies"}
               techlist={[
-                { name: "GraphQL", link: "any" },
-                { name: "React", link: "any" },
-                { name: "express", link: "any" },
-                { name: "sequelize", link: "any" },
-                { name: "postgresql", link: "any" },
-                { name: "d3 js", link: "any" },
-                { name: "Jwt", link: "any" },
-                { name: "Apollo server", link: "any" }
+                { name: <Icon icon={javascriptIcon}width="30" height="30" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+          { name: <Icon icon={nodejsIcon} width="30" height="30"/>, link: "https://nodejs.org/en/" },
+          { name: <Icon icon={reactIcon} width="30" height="30"/>, link: "https://reactjs.org" },
+          {
+            name: <Icon icon={graphqlIcon} width="30" height="30"/>,
+            link: "https://graphql.org"
+          },
+          { name: <Icon icon={expressIcon} width="30" height="30" />, link: "https://expressjs.com" },
+          { name: <Icon icon={apollostackIcon} width="30" height="30"/>, link: "https://www.apollographql.com/docs/apollo-server/" },
+          { name: <Icon icon={postgresqlIcon} width="30" height="30"/>, link: "https://www.postgresql.org" },
+          { name: <Icon icon={sequelizeIcon} width="30" height="30"/>, link: "https://sequelize.org" },
+          { name: <Icon icon={d3Icon} width="30" height="30"/>, link: "https://d3js.org" },
+
+          { name: <Icon icon={gitIcon} width="30" height="30"/>, link: "https://git-scm.com" },
+          
+          { name: <Icon icon={herokuIcon} width="30" height="30"/>, link: "https://dashboard.heroku.com" },
+          { name: "Jwt", link: "https://jwt.io" }
               ]}
               path={"https://anonymous-team-feeedback.herokuapp.com/"}
             />
@@ -48,8 +77,9 @@ const PortfolioContent = () => {
                 and companies based on simple swipe gestures like Tinder`}
               shortdeet={"Technologies"}
               techlist={[
-                { name: "Firebase", link: "any" },
-                { name: "React", link: "any" }
+                { name: <Icon icon={firebaseIcon} width="30" height="30"/>, link: "https://firebase.google.com/" },
+                { name: <Icon icon={reactIcon} width="30" height="30"/>, link: "https://reactjs.org" },
+                {name: <Icon icon={netlifyIcon} width="30" height="30"/>, link:'https://www.netlify.com/'},
               ]}
               path={"https://getdroom.netlify.com/"}
             />
@@ -63,8 +93,9 @@ const PortfolioContent = () => {
               }
               shortdeet={"Technologies"}
               techlist={[
-                { name: "React", link: "any" },
-                { name: "express", link: "any" }
+                { name: <Icon icon={reactIcon} width="30" height="30"/>, link: "https://reactjs.org" },
+                {name: <Icon icon={netlifyIcon} width="30" height="30"/>, link:'https://www.netlify.com/'},
+                { name: <Icon icon={expressIcon} width="30" height="30" />, link: "https://expressjs.com" },
               ]}
               path={"https://my-insta-clone-react.netlify.com/"}
             />
@@ -75,13 +106,12 @@ const PortfolioContent = () => {
               title={"Politico App"}
               details={`POLITICO is a full-stack vanilla JavaScript application that enables citizens to give their mandate 
                 to politicians running for different government offices`}
-              shortdeet={"Technologiesn"}
+              shortdeet={"Technologies"}
               techlist={[
-                { name: "express", link: "any" },
-                { name: "multer js", link: "any" },
-                { name: "postgresql", link: "any" },
-                { name: "node mailer", link: "any" },
-                { name: "Jwt", link: "any" }
+                { name: <Icon icon={expressIcon} width="30" height="30" />, link: "https://expressjs.com" },
+                { name: <Icon icon={postgresqlIcon} width="30" height="30"/>, link: "https://www.postgresql.org" },
+                { name: "node mailer", link: "https://nodemailer.com/about/" },
+                { name: "Jwt", link: "https://jwt.io" },
               ]}
               path={"https://the-politico.herokuapp.com/"}
             />

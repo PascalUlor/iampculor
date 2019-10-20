@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { white, heading5, tabletMaxWidth, mobileMaxWidth, deskTopMaxWidth } from "../../~reusables/variables";
+import { BrowserRouter as Router } from "react-router-dom";
+import ActionButtons from "./ActionButtons";
+import {
+  white,
+  heading5,
+  tabletMaxWidth,
+  mobileMaxWidth,
+  deskTopMaxWidth
+} from "../../~reusables/variables";
 
 const ContentArea = () => {
   return (
@@ -15,11 +23,17 @@ const ContentArea = () => {
           and a <strong>comic buff</strong>
         </SubHeading>
       </WelcomeText>
+      <BuutonWrap>
+        <ActionButtons text={"About"} path="/about" />
+        <ActionButtons text={"Portfolio"} path="/projects" />
+      </BuutonWrap>
     </Container>
   );
 };
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   top: 0;
   bottom: 0;
   left: 0;
@@ -66,6 +80,15 @@ const SubHeading = styled.h2`
   strong {
     font-weight: 500;
   }
+`;
+
+const BuutonWrap = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 5.15em auto;
+  overflow: hidden;
 `;
 
 export default ContentArea;

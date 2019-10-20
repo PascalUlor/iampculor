@@ -8,7 +8,7 @@ import {
   extraLargeWidth
 } from "../../~reusables/variables";
 
-const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, imh }) => {
+const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, details }) => {
   return (
     <Card>
       <Content>
@@ -16,9 +16,10 @@ const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, imh 
           <StyledDetails>
             <ProjectTitle>{title}</ProjectTitle>
             <br />
-            {line1}
+            {details.line1}
             <br />
-            {line2}
+            <br />
+            {details.line2}
             <br />
             <ShortDeet>{shortdeet}</ShortDeet>
             {techlist && (
@@ -120,6 +121,7 @@ const Description = styled.div`
 
 const StyledDetails = styled.div`
   padding: 5px;
+  font-weight: 400
 `;
 
 const ShortDeet = styled.strong`
