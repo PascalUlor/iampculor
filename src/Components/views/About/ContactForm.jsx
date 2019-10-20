@@ -45,15 +45,12 @@ const FormContainer = styled.div`
   margin: 15rem auto;
   @media (max-width: ${tabletMaxWidth}) {
     width: 100%;
-    margin: 30rem 1rem;
+    margin: 40rem 1rem;
   }
   @media (max-width: ${mobileMaxWidth}) {
     width: 100%;
-    margin: 50rem 1rem;
+    margin: 60rem 1rem;
   }
-  @media (max-width: 1402px){
-    margin-top: calc(100vh - 40rem);
-}
   `;
 
 

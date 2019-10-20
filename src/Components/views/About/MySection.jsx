@@ -147,9 +147,6 @@ const MyImage = styled.div`
     width: 300px;
     height: 300px;
     object-fit: cover;
-    /* @media (max-width: 1402px){
-
-    } */
   }
   @media (max-width: ${largeWidth}) {
     width: 100%;

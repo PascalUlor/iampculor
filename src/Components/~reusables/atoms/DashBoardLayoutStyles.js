@@ -3,8 +3,6 @@ import { tabletMaxWidth, mobileMaxWidth, white, extraLargeWidth } from "../varia
 
 export const MainContainer = styled.div`
   display: flex;
-  /* margin-top: 100px; */
-  /* height: calc(100vh - 100px); */
   height: 100vh;
 
   @media only screen and (max-width: ${tabletMaxWidth}) {
@@ -25,10 +23,6 @@ export const Container = styled.div`
     min-width: 100vw;
     padding: 0rem;
   }
-  /* @media (max-width: 700px) {
-    width: 100% !important;
-    padding: 0rem;
-  } */
 
   @media (max-width: ${mobileMaxWidth}) {
     width: 100%;
@@ -45,7 +39,6 @@ export const StyledSidebar = styled.aside`
   display: flex;
   flex-direction: column;
   background: rgba(145, 13, 13, 0.8);
-  /* background: ${white}; */
   z-index: 100;
 
 
@@ -55,7 +48,6 @@ export const StyledSidebar = styled.aside`
 
 
   @media (max-width: ${tabletMaxWidth}) {
-    /* display: none; */
     position: fixed;
     overflow: hidden;
     transform: translateX(-22rem);
@@ -102,7 +94,6 @@ export const StyledNavItem = styled.div`
   }
 
   &:hover a {
-    /* color: ${white}; */
     color: rgba(255, 255, 255, 0.6);
   }
 `;
@@ -118,7 +109,8 @@ export const SocialMediaStyles = styled.div`
   margin-top: 5rem;
   border-bottom: 1px solid #cfedfe;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: ${white};
+  font-weight: 500;
   line-height: 1.4rem;
 
   span.label {

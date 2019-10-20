@@ -31,11 +31,11 @@ class SidebarContainer extends React.Component {
                 path="/projects"
               />
 
-              <SideNavItem
+              {/* <SideNavItem
                 text={sidebarTexts.contact}
                 icon={sidebarIcons.contact}
                 path="/contact"
-              />
+              /> */}
 
               <SocialMedia
                 text={"Get in touch"}
