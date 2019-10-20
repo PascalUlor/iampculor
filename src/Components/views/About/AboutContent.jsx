@@ -4,6 +4,7 @@ import nodejsIcon from '@iconify/icons-logos/nodejs';
 import reactIcon from '@iconify/icons-logos/react';
 import javascriptIcon from '@iconify/icons-logos/javascript';
 import jqueryIcon from '@iconify/icons-logos/jquery';
+import expressIcon from '@iconify/icons-logos/express';
 
 
 import pythonIcon from '@iconify/icons-logos/python';
@@ -59,6 +60,7 @@ const AboutContent = () => {
             name: <Icon icon={graphqlIcon} />,
             link: "https://graphql.org"
           },
+          { name: <Icon icon={expressIcon} width="30" height="30" />, link: "https://expressjs.com" },
           { name: <Icon icon={apollostackIcon} />, link: "https://www.apollographql.com/docs/apollo-server/" },
           { name: <Icon icon={postgresqlIcon} />, link: "https://www.postgresql.org" },
           { name: <Icon icon={sequelizeIcon} />, link: "https://sequelize.org" },

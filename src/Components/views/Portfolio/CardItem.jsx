@@ -175,6 +175,7 @@ const ListItem = styled.li`
   padding-left: 1rem;
   position: relative;
   overflow: hidden;
+  font-weight: 500;
   a {
     display: inline-block;
     background-color: rgba(175, 34, 34, 0.8);
