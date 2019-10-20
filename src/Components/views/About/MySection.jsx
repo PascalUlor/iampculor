@@ -19,9 +19,7 @@ const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, imh 
             <br />
             {line1}
             <br />
-            <br />
             {line2}
-            <br />
             <br />
             <ShortDeet>{shortdeet}</ShortDeet>
             {techlist && (
@@ -82,7 +80,7 @@ const Content = styled.div`
   }
 
   @media (max-width: ${mobileMaxWidth}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     margin: 2rem auto;
   }
