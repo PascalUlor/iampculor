@@ -28,14 +28,15 @@ const PortfolioContent = () => {
                   give feedback anonymously to their teammates`}
               shortdeet={"Technologies"}
               techlist={[
-                { name: "GraphQL", link: "any" },
-                { name: "React", link: "any" },
-                { name: "express", link: "any" },
-                { name: "sequelize", link: "any" },
-                { name: "postgresql", link: "any" },
-                { name: "d3 js", link: "any" },
-                { name: "Jwt", link: "any" },
-                { name: "Apollo server", link: "any" }
+                { name: "GraphQL", link: "https://graphql.org" },
+                { name: "React", link: "https://reactjs.org" },
+                { name: "express", link: "https://expressjs.com" },
+                { name: "sequelize", link: "https://sequelize.org" },
+                { name: "postgresql", link: "https://www.postgresql.org" },
+                { name: "d3 js", link: "https://d3js.org" },
+                { name: "Jwt", link: "https://jwt.io" },
+                { name: "Apollo server", link: "https://www.apollographql.com/docs/apollo-server/" },
+                { name: "heroku", link: "https://dashboard.heroku.com" },
               ]}
               path={"https://anonymous-team-feeedback.herokuapp.com/"}
             />
@@ -48,8 +49,9 @@ const PortfolioContent = () => {
                 and companies based on simple swipe gestures like Tinder`}
               shortdeet={"Technologies"}
               techlist={[
-                { name: "Firebase", link: "any" },
-                { name: "React", link: "any" }
+                { name: "Firebase", link: "https://firebase.google.com/" },
+                { name: "React", link: "https://reactjs.org" },
+                {name: 'netlify', link:'https://www.netlify.com/'}
               ]}
               path={"https://getdroom.netlify.com/"}
             />
@@ -63,8 +65,8 @@ const PortfolioContent = () => {
               }
               shortdeet={"Technologies"}
               techlist={[
-                { name: "React", link: "any" },
-                { name: "express", link: "any" }
+                { name: "React", link: "https://reactjs.org" },
+                { name: "express", link: "https://expressjs.com" },
               ]}
               path={"https://my-insta-clone-react.netlify.com/"}
             />
@@ -77,11 +79,10 @@ const PortfolioContent = () => {
                 to politicians running for different government offices`}
               shortdeet={"Technologiesn"}
               techlist={[
-                { name: "express", link: "any" },
-                { name: "multer js", link: "any" },
-                { name: "postgresql", link: "any" },
-                { name: "node mailer", link: "any" },
-                { name: "Jwt", link: "any" }
+                { name: "express", link: "https://expressjs.com" },
+                { name: "postgresql", link: "https://www.postgresql.org" },
+                { name: "node mailer", link: "https://nodemailer.com/about/" },
+                { name: "Jwt", link: "https://jwt.io" },
               ]}
               path={"https://the-politico.herokuapp.com/"}
             />

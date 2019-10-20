@@ -1,4 +1,29 @@
 import React from "react";
+import { Icon, InlineIcon } from '@iconify/react';
+import nodejsIcon from '@iconify/icons-logos/nodejs';
+import reactIcon from '@iconify/icons-logos/react';
+import javascriptIcon from '@iconify/icons-logos/javascript';
+import jqueryIcon from '@iconify/icons-logos/jquery';
+
+
+import pythonIcon from '@iconify/icons-logos/python';
+import graphqlIcon from '@iconify/icons-logos/graphql';
+import postgresqlIcon from '@iconify/icons-logos/postgresql';
+import mongodbIcon from '@iconify/icons-logos/mongodb';
+
+import mysqlIcon from '@iconify/icons-logos/mysql';
+import d3Icon from '@iconify/icons-logos/d3';
+import gitIcon from '@iconify/icons-logos/git-icon';
+import azureIcon from '@iconify/icons-logos/azure';
+import herokuIcon from '@iconify/icons-logos/heroku-icon';
+import bootstrapIcon from '@iconify/icons-logos/bootstrap';
+import wordpressIcon from '@iconify/icons-logos/wordpress-icon';
+
+import apollostackIcon from '@iconify/icons-logos/apollostack';
+import firebaseIcon from '@iconify/icons-logos/firebase';
+import knexIcon from '@iconify/icons-logos/knex';
+import sequelizeIcon from '@iconify/icons-logos/sequelize';
+import netlifyIcon from '@iconify/icons-logos/netlify';
 import ContentLayout from "../../~reusables/components/ContentLayout";
 import MySection from "./MySection";
 import aboutpascal from "../../~reusables/assets/images/mypic.png";
@@ -23,33 +48,30 @@ const AboutContent = () => {
               running a Full-Stack Web Development and Computer Science program with Lambda School.`}
         shortdeet={"Technologies I work with"}
         techlist={[
-          { name: <i className="icon-javascript-alt" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-          { name: <i className="icon-nodejs" />, link: "https://nodejs.org/en/" },
-          { name: <i className="icon-reactjs" />, link: "https://reactjs.org" },
-          { name: <i className="icon-jquery" />, link: "https://jquery.com" },
-          { name: <i className="icon-python" />, link: "https://www.python.org" },
+          { name: <Icon icon={javascriptIcon} />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+          { name: <Icon icon={nodejsIcon} />, link: "https://nodejs.org/en/" },
+          { name: <Icon icon={reactIcon} />, link: "https://reactjs.org" },
+          { name: <Icon icon={jqueryIcon} width="30" height="30" />, link: "https://jquery.com" },
+          { name: <Icon icon={pythonIcon} />, link: "https://www.python.org" },
           {
-            name: (
-              <img
-                alt="svgImg"
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTg3Ljc5MTY3LDE2MS44MjY5MmwtNjIuNzA4MzMsLTM3LjA1NTI1di03My45Nmw2Mi43MDgzMywtMzcuMDU1MjVsNjIuNzA4MzMsMzcuMDU1MjV2NzMuOTZ6TTMyLjI1LDEyMC42ODY2N2w1NS41NDE2NywzMi44MTk3NWw1NS41NDE2NywtMzIuODE5NzV2LTY1Ljc5bC01NS41NDE2NywtMzIuODE5NzVsLTU1LjU0MTY3LDMyLjgxOTc1eiI+PC9wYXRoPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSI1LjUiIHRyYW5zZm9ybT0ic2NhbGUoMy41ODMzMywzLjU4MzMzKSIgcj0iMy41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSIyNC41IiBjeT0iNDMuNSIgdHJhbnNmb3JtPSJzY2FsZSgzLjU4MzMzLDMuNTgzMzMpIiByPSIzLjUiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjguNSIgY3k9IjMzLjUiIHRyYW5zZm9ybT0ic2NhbGUoMy41ODMzMywzLjU4MzMzKSIgcj0iMy41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSI0MC41IiBjeT0iMzMuNSIgdHJhbnNmb3JtPSJzY2FsZSgzLjU4MzMzLDMuNTgzMzMpIiByPSIzLjUiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjguNSIgY3k9IjE1LjUiIHRyYW5zZm9ybT0ic2NhbGUoMy41ODMzMywzLjU4MzMzKSIgcj0iMy41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSI0MC41IiBjeT0iMTUuNSIgdHJhbnNmb3JtPSJzY2FsZSgzLjU4MzMzLDMuNTgzMzMpIiByPSIzLjUiPjwvY2lyY2xlPjxwYXRoIGQ9Ik0xNTMuMDgsMTI1LjQxNjY3aC0xMzAuNTc2NjdsNjUuMjg4MzMsLTExNC43NDU1ek0zNC44MywxMTguMjVoMTA1LjkyMzMzbC01Mi45NjE2NywtOTMuMDg3ODN6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="
-                height="30"
-              />
-              // <img src="https://img.icons8.com/color/48/000000/graphql.png" height='30' />
-            ),
+            name: <Icon icon={graphqlIcon} />,
             link: "https://graphql.org"
           },
+          { name: <Icon icon={apollostackIcon} />, link: "https://www.apollographql.com/docs/apollo-server/" },
+          { name: <Icon icon={postgresqlIcon} />, link: "https://www.postgresql.org" },
+          { name: <Icon icon={sequelizeIcon} />, link: "https://sequelize.org" },
+          { name: <Icon icon={knexIcon} />, link: "http://knexjs.org/" },
+          { name: <Icon icon={mongodbIcon} width="30" height="30" />, link: "https://www.mongodb.com" },
+          { name: <Icon icon={mysqlIcon} />, link: "https://www.mysql.com" },
+          { name: <Icon icon={d3Icon} />, link: "https://d3js.org" },
 
-          { name: <i className="icon-postgres" />, link: "https://www.postgresql.org" },
-          { name: <i className="icon-mongodb" />, link: "https://www.mongodb.com" },
-          { name: <i className="icon-mysql-alt" />, link: "https://www.mysql.com" },
-          { name: <i className="icon-d3" />, link: "https://d3js.org" },
-
-          { name: <i className="icon-git" />, link: "https://git-scm.com" },
-          { name: <i className="icon-azure" />, link: "https://azure.microsoft.com/en-us/" },
-          { name: <i className="icon-heroku" />, link: "https://dashboard.heroku.com" },
-          { name: <i className="icon-bootstrap" />, link: "https://getbootstrap.com" },
-          { name: <i className="icon-wordpress" />, link: "https://wordpress.com/" },
+          { name: <Icon icon={gitIcon} />, link: "https://git-scm.com" },
+          { name: <Icon icon={firebaseIcon} />, link: "https://firebase.google.com/" },
+          { name: <Icon icon={azureIcon} />, link: "https://azure.microsoft.com/en-us/" },
+          { name: <Icon icon={herokuIcon} />, link: "https://dashboard.heroku.com" },
+          {name: <Icon icon={netlifyIcon} />, link:'https://www.netlify.com/'},
+          { name: <Icon icon={bootstrapIcon} />, link: "https://getbootstrap.com" },
+          { name: <Icon icon={wordpressIcon} />, link: "https://wordpress.com/" },
           { name: <i className="icon-svg" />, link: "https://developer.mozilla.org/en-US/docs/Web/SVG" }
         ]}
         path={"/"}
