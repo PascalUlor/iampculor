@@ -8,17 +8,17 @@ import {
   extraLargeWidth
 } from "../../~reusables/variables";
 
-const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
+const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, imh }) => {
   return (
     <Card>
-      {/* <span className="date">{date}</span> */}
       <Content>
         <Description>
           <StyledDetails>
             <ProjectTitle>{title}</ProjectTitle>
             <br />
-            {details}
+            {line1}
             <br />
+            {line2}
             <br />
             <ShortDeet>{shortdeet}</ShortDeet>
             {techlist && (
@@ -34,12 +34,11 @@ const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
             )}
           </StyledDetails>
         </Description>
-        <Demo>
+        <MyImage>
         {path && <NavLink to={path}>
         <img src={image} alt="" />
         </NavLink>}
-         
-        </Demo>
+        </MyImage>
       </Content>
     </Card>
   );
@@ -74,15 +73,17 @@ const Content = styled.div`
   display: flex;
   padding: 0;
   @media (max-width: ${tabletMaxWidth}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     margin: 2rem auto;
+    padding-left: 2rem;
   }
 
   @media (max-width: ${mobileMaxWidth}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     margin: 2rem auto;
+    padding-left: 2rem;
   }
 `;
 
@@ -91,6 +92,14 @@ const Description = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5px;
+  @media (max-width: 1402px){
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: calc(100vh - 80rem) 0;
+    margin: 2rem auto;
+    margin-bottom: calc(100vh - 40rem);
+}
   @media (max-width: ${tabletMaxWidth}) {
     justify-content: center;
     align-items: center;
@@ -106,6 +115,7 @@ const Description = styled.div`
     padding: 3px;
     margin: 0 auto;
   }
+  
 `;
 
 const StyledDetails = styled.div`
@@ -113,6 +123,8 @@ const StyledDetails = styled.div`
 `;
 
 const ShortDeet = styled.strong`
+display: flex;
+margin: 1rem 0;
   font-style: italic;
   font-weight: 500;
   text-transform: uppercase;
@@ -126,7 +138,7 @@ const ProjectTitle = styled.div`
   -webkit-font-smoothing: antialiased;
 `;
 
-const Demo = styled.div`
+const MyImage = styled.div`
   padding: 5px;
   width: 50%;
   margin: 5px auto;
@@ -136,9 +148,24 @@ const Demo = styled.div`
   align-items: center;
   img {
     border-radius: inherit;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  @media (min-width: ${extraLargeWidth}) {
+    width: 50%;
+  }
+
+  @media (max-width: 1402px){
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-  }
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
   @media (max-width: ${largeWidth}) {
     width: 100%;
     margin-top: 2rem;
@@ -157,16 +184,12 @@ const Demo = styled.div`
     width: 100%;
     padding: 3px;
     margin: 0 auto;
-  }
-  @media (min-width: ${extraLargeWidth}) {
-    width: 50%;
-  }
+  } 
 `;
 
 const DetailedList = styled.ul`
   margin: 0;
   padding: 0;
-  list-style: disc;
 `;
 
 const ListItem = styled.li`
@@ -179,9 +202,8 @@ const ListItem = styled.li`
     display: inline-block;
     background-color: rgba(175, 34, 34, 0.8);
     color: #fff;
-    padding: 4px 10px;
-    font-size: 13px;
-    text-transform: uppercase;
+    padding: 4px 8px;
+    font-size: 1.5rem;
   }
 `;
-export default CardItem;
+export default MySection;

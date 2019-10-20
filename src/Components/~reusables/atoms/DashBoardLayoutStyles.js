@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { tabletMaxWidth, mobileMAxWidth, white } from "../variables/index";
+import { tabletMaxWidth, mobileMaxWidth, white, extraLargeWidth } from "../variables/index";
 
 export const MainContainer = styled.div`
   display: flex;
-  /* margin-top: 100px; */
-  /* height: calc(100vh - 100px); */
   height: 100vh;
 
   @media only screen and (max-width: ${tabletMaxWidth}) {
@@ -18,12 +16,15 @@ export const Container = styled.div`
   -ms-overflow-style: none; // IE 10+
   scrollbar-width: none;
   margin: 0 auto;
-  @media (max-width: 700px) {
-    width: 100% !important;
+  @media (min-width: ${extraLargeWidth}) {
+    max-width: 100vw;
+  }
+  @media (max-width: ${tabletMaxWidth}) {
+    min-width: 100vw;
     padding: 0rem;
   }
 
-  @media (max-width: ${mobileMAxWidth}) {
+  @media (max-width: ${mobileMaxWidth}) {
     width: 100%;
     border: 1px solid transparent;
   }
@@ -38,20 +39,15 @@ export const StyledSidebar = styled.aside`
   display: flex;
   flex-direction: column;
   background: rgba(145, 13, 13, 0.8);
-  /* background: ${white}; */
   z-index: 100;
 
-  @media (max-width: 960px) {
-    flex: 3;
-  }
 
-  @media screen and (max-width: ${mobileMAxWidth}) {
+  @media screen and (max-width: ${mobileMaxWidth}) {
     width: 15rem;
   }
 
 
   @media (max-width: ${tabletMaxWidth}) {
-    /* display: none; */
     position: fixed;
     overflow: hidden;
     transform: translateX(-22rem);
@@ -91,12 +87,14 @@ export const StyledNavItem = styled.div`
     border-bottom: 1px solid #cfedfe;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
+    /* color: rgba(255, 255, 255, 0.6); */
+    color: ${white};
     line-height: 1.4rem;
+    font-weight: 500;
   }
 
   &:hover a {
-    color: ${white};
+    color: rgba(255, 255, 255, 0.6);
   }
 `;
 
@@ -105,14 +103,15 @@ export const SocialMediaStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    width: 100%;
-    padding: 1rem;
-    padding-left: 1.4rem;
-    margin-top: 5rem;
-    border-bottom: 1px solid #cfedfe;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.4rem;
+  width: 100%;
+  padding: 1rem;
+  padding-left: 1.4rem;
+  margin-top: 5rem;
+  border-bottom: 1px solid #cfedfe;
+  text-transform: uppercase;
+  color: ${white};
+  font-weight: 500;
+  line-height: 1.4rem;
 
   span.label {
     display: flex;
@@ -120,10 +119,10 @@ export const SocialMediaStyles = styled.div`
   }
   div {
     padding-right: 2rem;
-    @media (max-width: ${tabletMaxWidth}){
+    @media (max-width: ${tabletMaxWidth}) {
       padding-right: 5rem;
     }
-    @media (max-width: ${mobileMAxWidth}){
+    @media (max-width: ${mobileMaxWidth}) {
       padding-right: 0.5rem;
     }
   }

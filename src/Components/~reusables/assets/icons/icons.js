@@ -1,12 +1,12 @@
 export const sidebarIcons = {
-    portfolio: 'menu_book',
-    experience: 'work',
+    portfolio: 'work',
+    about: 'person',
     contact: 'public',
   };
   
   export const sidebarTexts = {
     portfolio: 'My Projects',
-    experience: 'Experience',
+    about: 'About Me',
     contact: 'contact me',
   };
   
