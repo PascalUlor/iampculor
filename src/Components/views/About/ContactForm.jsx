@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { SubmitButton } from "../../~reusables/atoms/Buttons";
 import {
   white,
   red,
@@ -9,7 +8,6 @@ import {
 } from "../../~reusables/variables";
 import TextInput from "../../~reusables/components/TextInput";
 import TextArea from "../../~reusables/components/TextArea";
-import { type } from "os";
 
 const encode = data => {
   return Object.keys(data)

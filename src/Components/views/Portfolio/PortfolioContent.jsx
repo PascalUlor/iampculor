@@ -1,30 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-
 import { Icon, InlineIcon } from '@iconify/react';
 import nodejsIcon from '@iconify/icons-logos/nodejs';
 import reactIcon from '@iconify/icons-logos/react';
 import javascriptIcon from '@iconify/icons-logos/javascript';
-import jqueryIcon from '@iconify/icons-logos/jquery';
 import expressIcon from '@iconify/icons-logos/express';
-
-
-import pythonIcon from '@iconify/icons-logos/python';
 import graphqlIcon from '@iconify/icons-logos/graphql';
 import postgresqlIcon from '@iconify/icons-logos/postgresql';
-import mongodbIcon from '@iconify/icons-logos/mongodb';
-
-import mysqlIcon from '@iconify/icons-logos/mysql';
 import d3Icon from '@iconify/icons-logos/d3';
 import gitIcon from '@iconify/icons-logos/git-icon';
-import azureIcon from '@iconify/icons-logos/azure';
 import herokuIcon from '@iconify/icons-logos/heroku-icon';
-import bootstrapIcon from '@iconify/icons-logos/bootstrap';
-import wordpressIcon from '@iconify/icons-logos/wordpress-icon';
-
 import apollostackIcon from '@iconify/icons-logos/apollostack';
 import firebaseIcon from '@iconify/icons-logos/firebase';
-import knexIcon from '@iconify/icons-logos/knex';
 import sequelizeIcon from '@iconify/icons-logos/sequelize';
 import netlifyIcon from '@iconify/icons-logos/netlify';
 import CardItem from "./CardItem";
