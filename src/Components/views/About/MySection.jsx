@@ -11,7 +11,6 @@ import {
 const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, imh }) => {
   return (
     <Card>
-      {/* <span className="date">{date}</span> */}
       <Content>
         <Description>
           <StyledDetails>
@@ -110,7 +109,7 @@ const Description = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: calc(100vh - 80rem) 0;
     margin: 2rem auto;
     margin-bottom: calc(100vh - 40rem);
 }
@@ -121,6 +120,8 @@ const StyledDetails = styled.div`
 `;
 
 const ShortDeet = styled.strong`
+display: flex;
+margin: 1rem 0;
   font-style: italic;
   font-weight: 500;
   text-transform: uppercase;
@@ -148,6 +149,20 @@ const MyImage = styled.div`
     height: 300px;
     object-fit: cover;
   }
+
+  @media (min-width: ${extraLargeWidth}) {
+    width: 50%;
+  }
+
+  @media (max-width: 1402px){
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
   @media (max-width: ${largeWidth}) {
     width: 100%;
     margin-top: 2rem;
@@ -166,24 +181,12 @@ const MyImage = styled.div`
     width: 100%;
     padding: 3px;
     margin: 0 auto;
-  }
-  @media (max-width: 1402px){
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    margin: 2rem auto;
-}
-  @media (min-width: ${extraLargeWidth}) {
-    width: 50%;
-  }
+  } 
 `;
 
 const DetailedList = styled.ul`
   margin: 0;
   padding: 0;
-  list-style: disc;
 `;
 
 const ListItem = styled.li`
