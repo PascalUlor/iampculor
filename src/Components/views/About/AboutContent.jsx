@@ -23,11 +23,11 @@ const AboutContent = () => {
               running a Full-Stack Web Development and Computer Science program with Lambda School.`}
         shortdeet={"Technologies I work with"}
         techlist={[
-          { name: <i className="icon-javascript-alt" />, link: "any" },
-          { name: <i className="icon-nodejs" />, link: "any" },
-          { name: <i className="icon-reactjs" />, link: "any" },
-          { name: <i className="icon-jquery" />, link: "any" },
-          { name: <i className="icon-python" />, link: "any" },
+          { name: <i className="icon-javascript-alt" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+          { name: <i className="icon-nodejs" />, link: "https://nodejs.org/en/" },
+          { name: <i className="icon-reactjs" />, link: "https://reactjs.org" },
+          { name: <i className="icon-jquery" />, link: "https://jquery.com" },
+          { name: <i className="icon-python" />, link: "https://www.python.org" },
           {
             name: (
               <img
@@ -37,20 +37,20 @@ const AboutContent = () => {
               />
               // <img src="https://img.icons8.com/color/48/000000/graphql.png" height='30' />
             ),
-            link: "any"
+            link: "https://graphql.org"
           },
 
-          { name: <i className="icon-postgres" />, link: "any" },
-          { name: <i className="icon-mongodb" />, link: "any" },
-          { name: <i className="icon-mysql-alt" />, link: "any" },
-          { name: <i className="icon-d3" />, link: "any" },
+          { name: <i className="icon-postgres" />, link: "https://www.postgresql.org" },
+          { name: <i className="icon-mongodb" />, link: "https://www.mongodb.com" },
+          { name: <i className="icon-mysql-alt" />, link: "https://www.mysql.com" },
+          { name: <i className="icon-d3" />, link: "https://d3js.org" },
 
-          { name: <i className="icon-git" />, link: "any" },
-          { name: <i className="icon-azure" />, link: "any" },
-          { name: <i className="icon-heroku" />, link: "any" },
-          { name: <i className="icon-bootstrap" />, link: "any" },
-          { name: <i className="icon-wordpress" />, link: "any" },
-          { name: <i className="icon-svg" />, link: "any" }
+          { name: <i className="icon-git" />, link: "https://git-scm.com" },
+          { name: <i className="icon-azure" />, link: "https://azure.microsoft.com/en-us/" },
+          { name: <i className="icon-heroku" />, link: "https://dashboard.heroku.com" },
+          { name: <i className="icon-bootstrap" />, link: "https://getbootstrap.com" },
+          { name: <i className="icon-wordpress" />, link: "https://wordpress.com/" },
+          { name: <i className="icon-svg" />, link: "https://developer.mozilla.org/en-US/docs/Web/SVG" }
         ]}
         path={"/"}
       />
