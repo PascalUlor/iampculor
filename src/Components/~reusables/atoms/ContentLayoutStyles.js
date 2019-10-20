@@ -1,10 +1,5 @@
 import styled from "styled-components";
 import {
-  white,
-  heading5,
-  tabletMaxWidth,
-  mobileMaxWidth,
-  deskTopMaxWidth,
   extraLargeWidth
 } from "../../~reusables/variables";
 import { LinkButton } from "../../~reusables/atoms/Buttons";

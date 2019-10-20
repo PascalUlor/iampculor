@@ -3,11 +3,8 @@ import styled from "styled-components";
 import {SubmitButton} from '../../~reusables/atoms/Buttons';
 import {
   red,
-  white,
-  heading5,
   tabletMaxWidth,
   mobileMaxWidth,
-  deskTopMaxWidth
 } from "../../~reusables/variables";
 import TextInput from "../../~reusables/components/TextInput";
 import TextArea from "../../~reusables/components/TextArea";
@@ -54,7 +51,7 @@ const FormContainer = styled.div`
   }
   @media (max-width: ${mobileMaxWidth}) {
     width: 100%;
-    margin: 60rem 1rem;
+    margin: calc(100rem - 90vh) 1rem;
   }
  
   `;

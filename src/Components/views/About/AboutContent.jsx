@@ -3,7 +3,6 @@ import ContentLayout from "../../~reusables/components/ContentLayout";
 import MySection from "./MySection";
 import aboutpascal from "../../~reusables/assets/images/mypic.png";
 import ContactForm from "./ContactForm";
-import Divider from "../../~reusables/atoms/Divider";
 
 const AboutContent = () => {
   return (
@@ -55,7 +54,6 @@ const AboutContent = () => {
         ]}
         path={"/"}
       />
-      {/* <Divider/> */}
       <ContactForm />
     </ContentLayout>
   );

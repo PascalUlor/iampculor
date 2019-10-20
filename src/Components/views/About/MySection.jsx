@@ -76,12 +76,14 @@ const Content = styled.div`
     flex-direction: column-reverse;
     width: 100%;
     margin: 2rem auto;
+    padding-left: 2rem;
   }
 
   @media (max-width: ${mobileMaxWidth}) {
     flex-direction: column-reverse;
     width: 100%;
     margin: 2rem auto;
+    padding-left: 2rem;
   }
 `;
 
@@ -90,6 +92,14 @@ const Description = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5px;
+  @media (max-width: 1402px){
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: calc(100vh - 80rem) 0;
+    margin: 2rem auto;
+    margin-bottom: calc(100vh - 40rem);
+}
   @media (max-width: ${tabletMaxWidth}) {
     justify-content: center;
     align-items: center;
@@ -105,14 +115,7 @@ const Description = styled.div`
     padding: 3px;
     margin: 0 auto;
   }
-  @media (max-width: 1402px){
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: calc(100vh - 80rem) 0;
-    margin: 2rem auto;
-    margin-bottom: calc(100vh - 40rem);
-}
+  
 `;
 
 const StyledDetails = styled.div`
