@@ -104,7 +104,7 @@ const FormContainer = styled.div`
   align-items: center;
   height: 100%;
   border-top: 1px solid ${red};
-  margin: 15rem auto;
+  margin: 17rem auto;
   @media (max-width: 1402px) {
     margin: calc(100vh - 10rem) auto;
   }
@@ -114,7 +114,7 @@ const FormContainer = styled.div`
   }
   @media (max-width: ${mobileMaxWidth}) {
     width: 100%;
-    margin: calc(100rem - 90vh) 1rem;
+    margin: calc(100rem - 75vh) 1rem;
   }
 `;
 

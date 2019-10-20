@@ -77,7 +77,7 @@ const PortfolioContent = () => {
               title={"Politico App"}
               details={`POLITICO is a full-stack vanilla JavaScript application that enables citizens to give their mandate 
                 to politicians running for different government offices`}
-              shortdeet={"Technologiesn"}
+              shortdeet={"Technologies"}
               techlist={[
                 { name: "express", link: "https://expressjs.com" },
                 { name: "postgresql", link: "https://www.postgresql.org" },
