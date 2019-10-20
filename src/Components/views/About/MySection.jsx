@@ -74,7 +74,7 @@ const Content = styled.div`
   display: flex;
   padding: 0;
   @media (max-width: ${tabletMaxWidth}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     margin: 2rem auto;
   }

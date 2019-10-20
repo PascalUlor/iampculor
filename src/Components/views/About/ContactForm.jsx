@@ -8,12 +8,26 @@ import {
   mobileMaxWidth,
   deskTopMaxWidth
 } from "../../~reusables/variables";
+import TextInput from "../../~reusables/components/TextInput";
+import TextArea from "../../~reusables/components/TextArea";
 
 const ContactForm = () => {
   return (
     <FormContainer>
-      <StyledForm>
-          <StyledInput/>
+    <FormTitle>Contact Me</FormTitle>
+      <StyledForm className="text-center border border-light p-5">
+          <TextInput
+          title="Name"
+            className="form-control mb-4"
+          />
+          <TextInput
+          title="Email"
+            className="form-control mb-4"
+          />
+          <TextArea
+          label="Message"
+            className="form-control mb-4"
+          />
       </StyledForm>
     </FormContainer>
   );
@@ -29,20 +43,30 @@ const FormContainer = styled.div`
   height: 100%;
   border-top: 1px solid ${red};
   margin: 15rem auto;
-  @media (max-width: 500px) {
-    margin: 30rem auto;
+  @media (max-width: ${tabletMaxWidth}) {
+    width: 100%;
+    margin: 30rem 1rem;
+  }
+  @media (max-width: ${mobileMaxWidth}) {
+    width: 100%;
+    margin: 50rem 1rem;
   }
   `;
 
 
 const StyledForm = styled.form`
   background: white;
-  width: 50%;
+  width: 100%;
   max-height: 100vh;
   padding-top: 4rem !important;
   a:hover {
     text-decoration: underline;
   }
+  input:focus, textarea:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+}
 
   @media (max-width: 1400px) {
     width: 60%;
@@ -66,9 +90,19 @@ const StyledForm = styled.form`
   }
 `;
 
+const FormTitle = styled.div`
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 0.3em;
+  -webkit-font-smoothing: antialiased;
+`;
+
 const StyledInput = styled.input`
 padding: 1rem;
 height: 30px;
+width: 50%;
+margin: 0 10rem;
 `;
 
 export default ContactForm;

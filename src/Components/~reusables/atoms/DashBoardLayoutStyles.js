@@ -21,10 +21,14 @@ export const Container = styled.div`
   @media (min-width: ${extraLargeWidth}) {
     max-width: 100vw;
   }
-  @media (max-width: 700px) {
-    width: 100% !important;
+  @media (max-width: ${tabletMaxWidth}) {
+    min-width: 100vw;
     padding: 0rem;
   }
+  /* @media (max-width: 700px) {
+    width: 100% !important;
+    padding: 0rem;
+  } */
 
   @media (max-width: ${mobileMaxWidth}) {
     width: 100%;
