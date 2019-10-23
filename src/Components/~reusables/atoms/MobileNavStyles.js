@@ -78,3 +78,25 @@ export const Social = styled.div`
     }
   }
 `;
+
+export const BackDrop = styled.div`
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  @media (max-width: ${tabletMaxWidth}) {
+    &.open {
+      display: block;
+    }
+  }
+
+  @media (max-width: ${mobileMaxWidth}) {
+    &.open {
+      display: block;
+    }
+  }
+`;

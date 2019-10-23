@@ -102,7 +102,7 @@ const FormContainer = styled.div`
   align-items: center;
   height: 100%;
   border-top: 1px solid ${red};
-  margin: 17rem auto;
+  margin: 20rem auto;
   @media (max-width: 1402px) {
     margin: calc(100vh - 10rem) auto;
   }

@@ -2,8 +2,8 @@ import React from "react";
 import {
   Container,
   MainContainer,
-  BackDrop
 } from "../atoms/DashBoardLayoutStyles";
+import {  BackDrop} from '../atoms/MobileNavStyles';
 import SideBar from "./SideBar";
 import { MyContext } from "../../../Provider";
 
@@ -13,12 +13,11 @@ const DashboardLayout = (
   <MyContext.Consumer>
     {context => (
       <MainContainer>
-        <SideBar />
-
-        <BackDrop
-          className={context.sidebarOpen ? "active" : ""}
+      <BackDrop
+          className={context.sidebarOpen ? "open" : ""}
           onClick={context.toggleSidebar}
         />
+        <SideBar />  
         <Container className="container">{children}</Container>
       </MainContainer>
     )}

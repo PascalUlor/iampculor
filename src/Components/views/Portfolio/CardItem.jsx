@@ -177,8 +177,9 @@ const ListItem = styled.li`
   font-weight: 500;
   a {
     display: inline-block;
-    background-color: rgba(175, 34, 34, 0.8);
-    color: #fff;
+    /* background-color: rgba(175, 34, 34, 0.8); */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #000;
     padding: 4px 10px;
     font-size: 13px;
     text-transform: uppercase;
