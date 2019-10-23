@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-  extraLargeWidth
+  extraLargeWidth, tabletMaxWidth, mobileMaxWidth
 } from "../../~reusables/variables";
 import { LinkButton } from "../../~reusables/atoms/Buttons";
 
@@ -39,6 +39,12 @@ margin-left: -50px;
 
 export const BackButton = styled(LinkButton)`
   font-size: 1.6rem;
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 0 0 60rem;
   padding: 0 1rem;
+  @media (max-width: ${tabletMaxWidth}) {
+    margin: 1rem 0 0 40rem;
+  }
+  @media (max-width: ${mobileMaxWidth}) {
+    margin: 1rem 0 0 15rem;
+  }
 `;
