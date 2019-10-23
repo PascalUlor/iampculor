@@ -18,9 +18,8 @@ const DashboardLayout = (
         <BackDrop
           className={context.sidebarOpen ? "active" : ""}
           onClick={context.toggleSidebar}
-        >
-          <Container className="container">{children}</Container>
-        </BackDrop>
+        />
+        <Container className="container">{children}</Container>
       </MainContainer>
     )}
   </MyContext.Consumer>
