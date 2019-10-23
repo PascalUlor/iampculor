@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { SubmitButton } from "../../~reusables/atoms/Buttons";
 import {
   white,
   red,
@@ -9,7 +8,6 @@ import {
 } from "../../~reusables/variables";
 import TextInput from "../../~reusables/components/TextInput";
 import TextArea from "../../~reusables/components/TextArea";
-import { type } from "os";
 
 const encode = data => {
   return Object.keys(data)
@@ -104,7 +102,7 @@ const FormContainer = styled.div`
   align-items: center;
   height: 100%;
   border-top: 1px solid ${red};
-  margin: 17rem auto;
+  margin: 20rem auto;
   @media (max-width: 1402px) {
     margin: calc(100vh - 10rem) auto;
   }

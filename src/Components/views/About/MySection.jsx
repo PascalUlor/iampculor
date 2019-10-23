@@ -202,8 +202,9 @@ const ListItem = styled.li`
   overflow: hidden;
   a {
     display: inline-block;
-    background-color: rgba(175, 34, 34, 0.8);
-    color: #fff;
+    /* background-color: rgba(175, 34, 34, 0.8); */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #000;
     padding: 4px 8px;
     font-size: 1.5rem;
   }
