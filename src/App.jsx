@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ContextProvider from "./Provider";
 import coverImage from './Components/~reusables/assets/images/home-bg.jpg';
 import Spinner from './Components/~reusables/components/Spinner';
+import Footer from './Components/~reusables/components/Footer';
 const LandingPage = React.lazy(()=> import('./Components/views/LandingPage/LandingPage'));
 const Portfolio = React.lazy(()=> import('./Components/views/Portfolio/Portfolio'));
 const AboutPage = React.lazy(()=> import('./Components/views/About/AboutPage'));
@@ -28,6 +29,7 @@ function App() {
     <Route exact path="/projects" component={Portfolio}/>
     <Route exact path="/about" component={AboutPage}/>
     </Switch>
+    <Footer/>
     </MainArea>
     </ContextProvider>
     </React.Suspense>
