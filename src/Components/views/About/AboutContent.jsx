@@ -23,6 +23,8 @@ import azureIcon from '@iconify/icons-logos/azure';
 import herokuIcon from '@iconify/icons-logos/heroku-icon';
 import bootstrapIcon from '@iconify/icons-logos/bootstrap';
 import wordpressIcon from '@iconify/icons-logos/wordpress-icon';
+import reduxIcon from '@iconify/icons-logos/redux';
+
 
 import apollostackIcon from '@iconify/icons-logos/apollostack';
 import firebaseIcon from '@iconify/icons-logos/firebase';
@@ -58,6 +60,7 @@ const AboutContent = () => {
           { name: <Icon icon={javascriptIcon} width="30" height="30" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
           { name: <Icon icon={nodejsIcon} width="30" height="30" />, link: "https://nodejs.org/en/" },
           { name: <Icon icon={reactIcon} width="30" height="30" />, link: "https://reactjs.org" },
+          { name: <Icon icon={reduxIcon} width="30" height="30" />, link: "https://redux.js.org/" },
           { name: <Icon icon={jqueryIcon} width="30" height="30" />, link: "https://jquery.com" },
           { name: <Icon icon={pythonIcon} width="30" height="30" />, link: "https://www.python.org" },
           { name: <Icon icon={djangoIcon} width="30" height="30" />, link: "https://www.djangoproject.com/" },

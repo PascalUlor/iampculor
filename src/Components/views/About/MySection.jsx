@@ -14,7 +14,7 @@ const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, deta
       <Content>
         <Description>
           <StyledDetails>
-            <ProjectTitle>{title}</ProjectTitle>
+            <BioHeader>{title}</BioHeader>
             <br />
             {details.line1}
             <br />
@@ -132,7 +132,7 @@ margin: 1rem 0;
   text-transform: uppercase;
 `;
 
-const ProjectTitle = styled.div`
+const BioHeader = styled.div`
   font-weight: 400;
   font-size: 30px;
   line-height: 1;
@@ -149,7 +149,7 @@ const MyImage = styled.div`
   justify-content: center;
   align-items: center;
   img {
-    border-radius: inherit;
+    border-radius: 20px;
     width: 300px;
     height: 300px;
     object-fit: cover;
