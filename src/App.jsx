@@ -5,6 +5,7 @@ import ContextProvider from "./Provider";
 import coverImage from './Components/~reusables/assets/images/home-bg.jpg';
 import Spinner from './Components/~reusables/components/Spinner';
 import Footer from './Components/~reusables/components/Footer';
+import { GlobalStyles } from './Components/~reusables/styles/GlobalStyles';
 const LandingPage = React.lazy(()=> import('./Components/views/LandingPage/LandingPage'));
 const Portfolio = React.lazy(()=> import('./Components/views/Portfolio/Portfolio'));
 const AboutPage = React.lazy(()=> import('./Components/views/About/AboutPage'));
@@ -19,6 +20,8 @@ width: 100vw;
 
 function App() {
   return (
+    <>
+    <GlobalStyles />
     <Router>
     <React.Suspense fallback={<Spinner />}>
     <ContextProvider>
@@ -34,6 +37,7 @@ function App() {
     </ContextProvider>
     </React.Suspense>
     </Router>
+    </>
   );
 }
 

@@ -7,6 +7,8 @@ import pythonIcon from "@iconify/icons-logos/python";
 import nodejsIcon from "@iconify/icons-logos/nodejs";
 import reactIcon from "@iconify/icons-logos/react";
 import javascriptIcon from "@iconify/icons-logos/javascript";
+import reduxIcon from '@iconify/icons-logos/redux';
+import reduxSaga from '@iconify/icons-logos/redux-saga';
 import expressIcon from "@iconify/icons-logos/express";
 import graphqlIcon from "@iconify/icons-logos/graphql";
 import postgresqlIcon from "@iconify/icons-logos/postgresql";
@@ -17,12 +19,14 @@ import apollostackIcon from "@iconify/icons-logos/apollostack";
 import firebaseIcon from "@iconify/icons-logos/firebase";
 import sequelizeIcon from "@iconify/icons-logos/sequelize";
 import netlifyIcon from "@iconify/icons-logos/netlify";
+import knexIcon from '@iconify/icons-logos/knex';
 import CardItem from "./CardItem";
 import AnonymousTeamFeedBack from "../../~reusables/assets/images/Sample Survey.gif";
 import Droom from "../../~reusables/assets/images/droomapp.jpeg";
 import Politico from "../../~reusables/assets/images/politico.gif";
 import Insatclone from "../../~reusables/assets/images/instaclone.gif";
 import MudGame from "../../~reusables/assets/images/mud.png";
+import Hackton from "../../~reusables/assets/images/hackton.png";
 import Divider from "../../~reusables/atoms/Divider";
 import ContentLayout from "../../~reusables/components/ContentLayout";
 
@@ -31,6 +35,59 @@ const PortfolioContent = () => {
     <ContentLayout>
       <ProjectList>
         <ListItem>
+        <CardItem
+            date={"Feb 2020"}
+            image={Hackton}
+            title={"Hackton"}
+            details={`A comprehensive portal for hackathons where students can submit their work and judges can evaluate in one place.
+            It is an app that helps you organize and evaluate Hackathons.`}
+            shortdeet={"Technologies"}
+            techlist={[
+              {
+                name: <Icon icon={javascriptIcon} width="30" height="30" />,
+                link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              },
+              {
+                name: <Icon icon={nodejsIcon} width="30" height="30" />,
+                link: "https://nodejs.org/en/"
+              },
+              {
+                name: <Icon icon={reactIcon} width="30" height="30" />,
+                link: "https://reactjs.org"
+              },
+              {
+                name: <Icon icon={gitIcon} width="30" height="30" />,
+                link: "https://git-scm.com"
+              },
+              {
+                name: <Icon icon={herokuIcon} width="30" height="30" />,
+                link: "https://dashboard.heroku.com"
+              },
+              {
+                name: <Icon icon={postgresqlIcon} width="30" height="30" />,
+                link: "https://www.postgresql.org"
+              },
+              {
+                name: <Icon icon={expressIcon} width="30" height="30" />,
+                link: "https://expressjs.com"
+              },
+              {
+              name: <Icon icon={reduxIcon} width="30" height="30" />,
+              link: "https://redux.js.org/"
+              },
+              {
+              name: <Icon icon={reduxSaga} width="30" height="30" />,
+              link: "https://redux-saga.js.org/"
+              },
+              { 
+              name: <Icon icon={knexIcon} width="30" height="30" />,
+              link: "http://knexjs.org/"
+              }
+            ]}
+            path={"https://hackton.co/"}
+          />
+
+          <Divider />
           <CardItem
             date={"Oct 2019"}
             image={MudGame}

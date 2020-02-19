@@ -14,13 +14,15 @@ const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, deta
       <Content>
         <Description>
           <StyledDetails>
-            <ProjectTitle>{title}</ProjectTitle>
+            <BioHeader>{title}</BioHeader>
+            <Bio>
             <br />
             {details.line1}
             <br />
             <br />
             {details.line2}
             <br />
+            </Bio>
             <ShortDeet>{shortdeet}</ShortDeet>
             {techlist && (
               <DetailedList>
@@ -124,6 +126,26 @@ const StyledDetails = styled.div`
   font-weight: 400
 `;
 
+const Bio = styled.div`
+padding: 0 0 0 20px;
+line-height: 1.5;
+@media (max-width: ${tabletMaxWidth}) {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 3px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: ${mobileMaxWidth}) {
+    text-align: justify;
+    word-wrap: break-word;
+    max-width: 100%;
+    padding: 3px;
+    line-height: 1.5;
+  }
+`;
+
 const ShortDeet = styled.strong`
 display: flex;
 margin: 1rem 0;
@@ -132,7 +154,7 @@ margin: 1rem 0;
   text-transform: uppercase;
 `;
 
-const ProjectTitle = styled.div`
+const BioHeader = styled.div`
   font-weight: 400;
   font-size: 30px;
   line-height: 1;
@@ -149,7 +171,7 @@ const MyImage = styled.div`
   justify-content: center;
   align-items: center;
   img {
-    border-radius: inherit;
+    border-radius: 20px;
     width: 300px;
     height: 300px;
     object-fit: cover;
