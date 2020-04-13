@@ -46,14 +46,15 @@ const AboutContent = () => {
         details={{
           line1:`I am Pascal Chukwuemeka Ulor, a Jesus lover, an
               adventurer and a total geek.
-              All my life I've had a flair for puzzles and this urged me to major in Mathematcis
-              at the University of Ibadan Nigeria. My passion for programming was ingnited during my final year
-              project when I had to analyse data using "Matlab" and "R", this made me realise that to efficiently solve problems in my 
+              All my life I've had a flair for puzzles and this urged me to major in Mathematics
+              at the University of Ibadan Nigeria. My passion for programming was ignited during my final year
+              project when I had to analyze data using "Matlab" and "R", this made me realize that to efficiently solve problems in my 
               field as a mathematician I needed some coding skills.`,
-        line2:`Since graduating college I've been up and about in the tech industry. I've  lectured people in programming,
+        line2:`Since graduating college I've been up and about in the tech industry and concluded
+              a Full-Stack Web Development and Computer Science program with Lambda School. 
+              I've  lectured people in programming,
               worked and freelanced as an SEO specialist and also as a data analyst.
-              Most recently I worked with "Andela" as a Software Engineer and I'm currently 
-              running a Full-Stack Web Development and Computer Science program with Lambda School.`
+              Most recently I worked with "Andela" as a Software Engineer and as a Technical Team Lead at Lambda School.`
         }}
         shortdeet={"Technologies I work with"}
         techlist={[
