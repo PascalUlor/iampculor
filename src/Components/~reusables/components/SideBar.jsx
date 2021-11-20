@@ -5,15 +5,16 @@ import { sidebarIcons, sidebarTexts } from "../assets/icons/icons";
 import { StyledSidebar } from "../atoms/DashBoardLayoutStyles";
 import SocialMedia from "./SocialMedia";
 import { MyContext } from "../../../Provider";
-import pascal from "../assets/images/pascal.jpg";
+// import pascal from "../assets/images/profilepix.jpg";
 
 class SidebarContainer extends React.Component {
+  profilepix = 'https://res.cloudinary.com/donpcdocs/image/upload/v1637446189/personal/profilepix.jpg'
   render() {
     return (
       <MyContext.Consumer>
         {context => (
           <StyledSidebar className={context.sidebarOpen ? "active" : ""}>
-            <ProfileImage name={"Pascal Ulor"} image={pascal} path="/" />
+            <ProfileImage name={"Pascal Ulor"} image={this.profilepix} path="/" />
             <div
               className="nav-items"
               role="presentation"

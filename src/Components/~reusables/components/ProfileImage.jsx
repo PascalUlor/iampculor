@@ -42,6 +42,7 @@ const StyledImage = styled.div`
       border-radius: inherit;
       width: inherit;
       height: inherit;
+      object-fit: cover;
     }
   }
 
