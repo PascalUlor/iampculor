@@ -7,7 +7,7 @@ import {
 
 export const StyledFooter = styled.footer`
   height: 50px;
-  background: ${red};
+  background: rgba(145, 13, 13, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,10 @@ export const StyledFooter = styled.footer`
   height: 56px;
   width: 100%;
   > * {
-    color: #444;
+    color: rgba(255, 255, 255, 0.6);
   }
   a {
-    color: #444;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: underline;
   }
 

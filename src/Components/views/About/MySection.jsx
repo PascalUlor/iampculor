@@ -22,6 +22,9 @@ const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, deta
             <br />
             {details.line2}
             <br />
+            <br />
+            {details.line3}
+            <br />
             </Bio>
             <ShortDeet>{shortdeet}</ShortDeet>
             {techlist && (
