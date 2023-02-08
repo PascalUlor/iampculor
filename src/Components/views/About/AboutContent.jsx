@@ -52,8 +52,8 @@ const AboutContent = () => {
               project when I had to analyze data using "Matlab" and "R", this made me realize that to efficiently solve problems in my 
               field as a mathematician I needed some coding skills.`,
 
-          line2: `As a Software Engineer with over 5 years experience I've realized that my prior experiences in SEO, content writing, and data analysis grants me a unique perspective when working building software solutions. 
-        I have a good track record of in FinTech space where I have built APIs and microservices for payment solutions and have also been heavily involved in designing systems and scaling services.
+          line2: `As a Software Engineer with over 5 years experience I've realized that my prior experiences in SEO, content writing, and data analysis grants me a unique perspective when I'm building or working on software solutions. 
+        I have a good track record of in the FinTech (Financial Technology) space where I have built APIs and microservices for payment solutions and have also been heavily involved in designing systems and scaling services.
         My prior experience as an Engineering manager (and CTO) in a Fintech startup got me actively involved in coordinating and managing an engineering team.`,
 
           line3: `Most recently I'm part of a decentralized team of Software Engineers building resilient and innovative systems and in my spare time I mentor students on programming at Lighthouse Labs.`,
