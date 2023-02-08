@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {
-  red,
   mobileMaxWidth,
   tabletMaxWidth,
 } from "../variables";
