@@ -133,6 +133,7 @@ const StyledForm = styled.form`
   width: 100%;
   max-height: 100vh;
   padding-top: 4rem !important;
+  margin-bottom: 5rem;
   a:hover {
     text-decoration: underline;
   }

@@ -9,7 +9,8 @@ import reactIcon from "@iconify/icons-logos/react";
 import javascriptIcon from "@iconify/icons-logos/javascript";
 import reduxIcon from '@iconify/icons-logos/redux';
 import reduxSaga from '@iconify/icons-logos/redux-saga';
-import expressIcon from "@iconify/icons-logos/express";
+// import expressIcon from "@iconify/icons-logos/express";
+import expressjsDark from '@iconify/icons-skill-icons/expressjs-dark';
 import graphqlIcon from "@iconify/icons-logos/graphql";
 import postgresqlIcon from "@iconify/icons-logos/postgresql";
 import d3Icon from "@iconify/icons-logos/d3";
@@ -68,7 +69,7 @@ const PortfolioContent = () => {
                 link: "https://www.postgresql.org"
               },
               {
-                name: <Icon icon={expressIcon} width="30" height="30" />,
+                name: <Icon icon={expressjsDark} width="30" height="30" />,
                 link: "https://expressjs.com"
               },
               {
@@ -155,7 +156,7 @@ const PortfolioContent = () => {
                 link: "https://graphql.org"
               },
               {
-                name: <Icon icon={expressIcon} width="30" height="30" />,
+                name: <Icon icon={expressjsDark} width="30" height="30" />,
                 link: "https://expressjs.com"
               },
               {
@@ -239,7 +240,7 @@ const PortfolioContent = () => {
                 link: "https://www.netlify.com/"
               },
               {
-                name: <Icon icon={expressIcon} width="30" height="30" />,
+                name: <Icon icon={expressjsDark} width="30" height="30" />,
                 link: "https://expressjs.com"
               }
             ]}
@@ -255,7 +256,7 @@ const PortfolioContent = () => {
             shortdeet={"Technologies"}
             techlist={[
               {
-                name: <Icon icon={expressIcon} width="30" height="30" />,
+                name: <Icon icon={expressjsDark} width="30" height="30" />,
                 link: "https://expressjs.com"
               },
               {

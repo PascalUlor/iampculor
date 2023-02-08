@@ -14,6 +14,9 @@ const MediaIcons = () => {
       <a rel="me" href="https://github.com/PascalUlor" title="github">
         <i className="fab fa-github-square" />
       </a>
+      <a rel="me" href="https://gitlab.com/ulorpascal" title="gitlab">
+        <i className="fab fa-gitlab" />
+      </a>
       <a rel="me" href="https://twitter.com/pc_codes" title="twitter">
         <i className="fab fa-twitter-square" />
       </a>
