@@ -37,6 +37,63 @@ const PortfolioContent = () => {
       <ProjectList>
         <ListItem>
         <CardItem
+            date={"May 2021"}
+            image='https://www.loom.com/share/625011cac161465382ffdaf8b9032d7c?sid=be0d53e2-8c37-4009-88bb-1aab34c04895'
+            title={"LingoOwl"}
+            details={`A SAS platform that leverages AI and professional language experts to translate documents securely.`}
+            shortdeet={"Technologies"}
+            techlist={[
+              {
+                name: <Icon icon={javascriptIcon} width="30" height="30" />,
+                link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              },
+              {
+                name: <Icon icon={nodejsIcon} width="30" height="30" />,
+                link: "https://nodejs.org/en/"
+              },
+              {
+                name: <Icon icon={reactIcon} width="30" height="30" />,
+                link: "https://reactjs.org"
+              },
+              {
+                name: <Icon icon={gitIcon} width="30" height="30" />,
+                link: "https://git-scm.com"
+              },
+              {
+                name: <Icon icon={herokuIcon} width="30" height="30" />,
+                link: "https://dashboard.heroku.com"
+              },
+              {
+                name: <Icon icon={postgresqlIcon} width="30" height="30" />,
+                link: "https://www.postgresql.org"
+              },
+              {
+                name: <Icon icon={expressjsDark} width="30" height="30" />,
+                link: "https://expressjs.com"
+              },
+              {
+              name: <Icon icon={reduxIcon} width="30" height="30" />,
+              link: "https://redux.js.org/"
+              },
+              {
+              name: <Icon icon={reduxSaga} width="30" height="30" />,
+              link: "https://redux-saga.js.org/"
+              },
+               {
+                name: <Icon icon={graphqlIcon} width="30" height="30" />,
+                link: "https://graphql.org"
+              },
+              {
+                name: <Icon icon={apollostackIcon} width="30" height="30" />,
+                link: "https://www.apollographql.com/docs/apollo-server/"
+              },
+            ]}
+            path={"https://lingoowl.com/"}
+          />
+
+        <Divider />
+
+        <CardItem
             date={"Feb 2020"}
             image={Hackton}
             title={"Hackton"}
