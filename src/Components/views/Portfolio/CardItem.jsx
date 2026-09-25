@@ -8,6 +8,91 @@ import {
 } from "../../~reusables/variables";
 
 const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
+  // Helper to detect video/embed URLs
+  const isLoom = (url) => typeof url === 'string' && url.includes('loom.com');
+  const isYouTube = (url) => typeof url === 'string' && (url.includes('youtube.com') || url.includes('youtu.be'));
+  const isVideoFile = (url) => typeof url === 'string' && url.match(/\.(mp4|webm|ogg)(\?|$)/i);
+
+  const renderMedia = () => {
+    // Prefer explicit path for embeddable links, otherwise fall back to image
+    const mediaUrl = image;
+    if (!mediaUrl) return null;
+
+    if (isLoom(mediaUrl)) {
+      // Loom embed: convert to embed URL if possible
+      // Loom embed format: https://www.loom.com/embed/<id>
+      // If user supplied a share URL (https://www.loom.com/share/<id>), change to /embed/
+      const embedUrl = mediaUrl.includes('/share/')
+        ? mediaUrl.replace('/share/', '/embed/')
+        : mediaUrl.includes('/embed/')
+        ? mediaUrl
+        : mediaUrl;
+      return (
+        <EmbedWrapper>
+          <iframe
+            title={title || 'loom-video'}
+            src={embedUrl}
+            frameBorder="0"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            allowFullScreen
+          />
+        </EmbedWrapper>
+      );
+    }
+
+    if (isYouTube(mediaUrl)) {
+      // Normalize YouTube urls to embed form
+      let videoId = null;
+      try {
+        if (mediaUrl.includes('youtu.be/')) {
+          videoId = mediaUrl.split('youtu.be/')[1].split(/[?&]/)[0];
+        } else {
+          const u = new URL(mediaUrl);
+          videoId = u.searchParams.get('v');
+        }
+      } catch (e) {
+        videoId = null;
+      }
+      const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : mediaUrl;
+      return (
+        <EmbedWrapper>
+          <iframe
+            title={title || 'youtube-video'}
+            src={embedUrl}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </EmbedWrapper>
+      );
+    }
+
+    if (isVideoFile(mediaUrl)) {
+      return (
+        <VideoWrapper>
+          <video controls>
+            <source src={mediaUrl} />
+            Your browser does not support the video tag.
+          </video>
+        </VideoWrapper>
+      );
+    }
+
+    // Fallback to image. If path provided wrap it in anchor
+    return (
+      <>
+        {path ? (
+          <a href={path}>
+            <img src={image} alt={title || ''} />
+          </a>
+        ) : (
+          <img src={image} alt={title || ''} />
+        )}
+      </>
+    );
+  };
+
   return (
     <Card>
       {/* <span className="date">{date}</span> */}
@@ -33,12 +118,7 @@ const CardItem = ({ image, title, details, shortdeet, techlist, path }) => {
             )}
           </StyledDetails>
         </Description>
-        <Demo>
-        {path && <a href={path}>
-        <img src={image} alt="" />
-        </a>}
-         
-        </Demo>
+        <Demo>{renderMedia()}</Demo>
       </Content>
     </Card>
   );
@@ -48,16 +128,12 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  
+
   width: 100%;
-  max-height: 300px;
   span.date {
     position: relative;
     display: flex;
     align-items: center;
-  }
-  @media (max-width: 1200px) {
-    margin-bottom: 15rem;
   }
 
   @media (max-width: ${tabletMaxWidth}) {
@@ -123,6 +199,12 @@ const ProjectTitle = styled.div`
   line-height: 1;
   margin-bottom: 0.3em;
   -webkit-font-smoothing: antialiased;
+  @media (max-width: ${tabletMaxWidth}) {
+    font-size: 24px;
+  }
+  @media (max-width: ${mobileMaxWidth}) {
+    font-size: 20px;
+  }
 `;
 
 const Demo = styled.div`
@@ -159,6 +241,29 @@ const Demo = styled.div`
   }
   @media (min-width: ${extraLargeWidth}) {
     width: 50%;
+  }
+`;
+
+const EmbedWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+`;
+
+const VideoWrapper = styled.div`
+  width: 100%;
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 `;
 

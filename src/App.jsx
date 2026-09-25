@@ -9,6 +9,7 @@ import { GlobalStyles } from './Components/~reusables/styles/GlobalStyles';
 const LandingPage = React.lazy(()=> import('./Components/views/LandingPage/LandingPage'));
 const Portfolio = React.lazy(()=> import('./Components/views/Portfolio/Portfolio'));
 const AboutPage = React.lazy(()=> import('./Components/views/About/AboutPage'));
+const ServicesPage = React.lazy(()=> import('./Components/views/Services/ServicesPage'));
 const MobileNav = React.lazy(()=> import('./Components/~reusables/components/MobileNav'));
 
 const MainArea = styled.div`
@@ -31,6 +32,7 @@ function App() {
     <Route exact path="/" component={LandingPage} />
     <Route exact path="/projects" component={Portfolio}/>
     <Route exact path="/about" component={AboutPage}/>
+    <Route exact path="/services" component={ServicesPage}/>
     </Switch>
     <Footer/>
     </MainArea>

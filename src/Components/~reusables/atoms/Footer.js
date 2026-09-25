@@ -1,11 +1,8 @@
 import styled from "styled-components";
-import {
-  mobileMaxWidth,
-  tabletMaxWidth,
-} from "../variables";
+import { mobileMaxWidth } from "../variables";
 
 export const StyledFooter = styled.footer`
-  height: 50px;
+  height: 56px;
   background: rgba(145, 13, 13, 0.8);
   display: flex;
   justify-content: center;
@@ -13,7 +10,6 @@ export const StyledFooter = styled.footer`
   z-index: 5;
   position: fixed;
   bottom: 0;
-  height: 56px;
   width: 100%;
   > * {
     color: rgba(255, 255, 255, 0.6);
@@ -22,18 +18,14 @@ export const StyledFooter = styled.footer`
     color: rgba(255, 255, 255, 0.6);
     text-decoration: underline;
   }
-
-  @media (max-width: ${tabletMaxWidth}) {
-    display: flex;
-  }
-
-  @media (max-width: ${mobileMaxWidth}) {
-    display: flex;
-    width: 100%;
-  }
 `;
 
 export const FooterText = styled.div`
   font-size: 18px;
- font-weight: 500
+  font-weight: 500;
+  @media (max-width: ${mobileMaxWidth}) {
+    font-size: 14px;
+    padding: 0 0.5rem;
+    text-align: center;
+  }
 `;

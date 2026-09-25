@@ -22,10 +22,10 @@ const ContentArea = () => {
           and a <strong>comic buff</strong>
         </SubHeading>
       </WelcomeText>
-      <BuutonWrap>
+      <ButtonWrap>
         <ActionButtons text={"About"} path="/about" />
         <ActionButtons text={"Portfolio"} path="/projects" />
-      </BuutonWrap>
+      </ButtonWrap>
     </Container>
   );
 };
@@ -81,7 +81,7 @@ const SubHeading = styled.h2`
   }
 `;
 
-const BuutonWrap = styled.div`
+const ButtonWrap = styled.div`
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;

@@ -15,9 +15,9 @@ export const ContentContainer = styled.div`
   position: relative;
   -webkit-font-smoothing: antialiased;
   background: #f4f4f4;
+  min-height: 100vh;
   max-height: 100vh;
   @media (min-width: ${extraLargeWidth}) {
-    min-height: 100vh;
     max-width: 100vw;
     position: relative;
   }
@@ -30,11 +30,23 @@ export const Layout = styled.div`
   @media (min-width: ${extraLargeWidth}) {
     max-width: 100vw;
   }
+  @media (max-width: ${tabletMaxWidth}) {
+    padding: 25px;
+  }
+  @media (max-width: ${mobileMaxWidth}) {
+    padding: 15px;
+  }
 `;
 
 export const Inners = styled.div`
 font-size: 16px;
 margin-left: -50px;
+@media (max-width: ${tabletMaxWidth}) {
+  margin-left: -20px;
+}
+@media (max-width: ${mobileMaxWidth}) {
+  margin-left: 0;
+}
 `;
 
 export const BackButton = styled(LinkButton)`
@@ -45,6 +57,6 @@ export const BackButton = styled(LinkButton)`
     margin: 1rem 0 0 40rem;
   }
   @media (max-width: ${mobileMaxWidth}) {
-    margin: 1rem 0 0 15rem;
+    margin: 1rem 0 0 1rem;
   }
 `;
