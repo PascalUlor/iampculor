@@ -4,7 +4,8 @@ import {
   white,
   red,
   tabletMaxWidth,
-  mobileMaxWidth
+  mobileMaxWidth,
+  largeWidth
 } from "../../~reusables/variables";
 import TextInput from "../../~reusables/components/TextInput";
 import TextArea from "../../~reusables/components/TextArea";
@@ -100,31 +101,20 @@ const FormContainer = styled.div`
   padding: 1rem;
   justify-content: center;
   align-items: center;
-  height: 100%;
   border-top: 1px solid ${red};
-  margin: 20rem auto;
-  @media (max-width: 1402px) {
-    margin: calc(100vh - 10rem) auto;
-  }
+  margin: 4rem auto;
 
-  @media (max-height: 1400px) {
-    margin: calc(100vh - 40rem) auto;
-  }
-
-  @media (max-height: 1000px) {
-    margin: calc(100vh - 20rem) auto;
+  @media (max-width: ${largeWidth}) {
+    width: 85%;
   }
 
   @media (max-width: ${tabletMaxWidth}) {
     width: 100%;
-    margin: 40rem 1rem;
+    margin: 3rem auto;
   }
   @media (max-width: ${mobileMaxWidth}) {
     width: 100%;
-    margin: calc(100rem - 75vh) 1rem;
-  }
-  @media (max-width: ${mobileMaxWidth}) and (max-height: 812px) {
-    margin: calc(100rem - 55vh) 1rem;
+    margin: 2rem auto;
   }
 `;
 
@@ -172,6 +162,12 @@ const FormTitle = styled.div`
   line-height: 1;
   margin-bottom: 0.3em;
   -webkit-font-smoothing: antialiased;
+  @media (max-width: ${tabletMaxWidth}) {
+    font-size: 24px;
+  }
+  @media (max-width: ${mobileMaxWidth}) {
+    font-size: 20px;
+  }
 `;
 
 const FormButton = styled.button.attrs({
@@ -189,5 +185,10 @@ const FormButton = styled.button.attrs({
   margin: 1rem 0 0 1rem;
   padding: 0.5rem 2rem;
   text-decoration: none !important;
+  @media (max-width: ${mobileMaxWidth}) {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    margin-left: 0;
+  }
 `;
 export default ContactForm;

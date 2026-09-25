@@ -32,8 +32,15 @@ import firebaseIcon from "@iconify/icons-logos/firebase";
 import knexIcon from "@iconify/icons-logos/knex";
 import sequelizeIcon from "@iconify/icons-logos/sequelize";
 import netlifyIcon from "@iconify/icons-logos/netlify";
+import awsIcon from "@iconify/icons-logos/aws";
+import openaiIcon from "@iconify/icons-logos/openai-icon";
+import ClaraWave from "../../~reusables/assets/images/clarawave.png";
+import Klout from "../../~reusables/assets/images/klout.png";
+import ClaudeIcon from "../../~reusables/assets/images/claude.svg";
+import AnthropicIcon from "../../~reusables/assets/images/anthropic.svg";
+import GeminiIcon from "../../~reusables/assets/images/google-gemini.svg";
 import ContentLayout from "../../~reusables/components/ContentLayout";
-import MySection from "./MySection";
+import MySection, { BioLink } from "./MySection";
 import aboutpascal from "../../~reusables/assets/images/mypic.png";
 import ContactForm from "./ContactForm";
 
@@ -44,22 +51,27 @@ const AboutContent = () => {
         image={aboutpascal}
         imh={"50"}
         title={"BIO"}
+        resumeUrl={"https://res.cloudinary.com/donpcdocs/image/upload/fl_attachment/v1789813255/personal/Ulor_Pascal_Resume_Updated.pdf"}
         details={{
-          line1: `I am Pascal Chukwuemeka Ulor, a Jesus lover, an
-              adventurer, an Arsenal FC fan and a total geek.
-              All my life I've had a flair for puzzles and this urged me to major in Mathematics
-              at the University of Ibadan Nigeria. My passion for programming was ignited during my final year
-              project when I had to analyze data using "Matlab" and "R", this made me realize that to efficiently solve problems in my 
-              field as a mathematician I needed some coding skills.`,
+          line1: `I am Pascal Chukwuemeka Ulor, a mathematician, an adventurer, an Arsenal FC fan and a total geek. All my life I've had a flair for puzzles, and this motivated me to major in Mathematics at the University of Ibadan, Nigeria. My passion for programming was ignited during my final year project, when I had to analyze data using Matlab and R — that's when I realized that to solve problems efficiently as a mathematician, I needed to learn programming.`,
 
-          line2: `As a Software Engineer with over 5 years experience I've realized that my prior experiences in SEO, content writing, and data analysis grants me a unique perspective when I'm building or working on software solutions. 
-        I have a good track record of in the FinTech (Financial Technology) space where I have built APIs and microservices for payment solutions and have also been heavily involved in designing systems and scaling services.
-        My prior experience as an Engineering manager (and CTO) in a Fintech startup got me actively involved in coordinating and managing an engineering team.`,
+          line2: (
+            <>
+              As a backend-focused Full-Stack Software Engineer with over 7 years of experience, I've spent most of my career in the FinTech space — designing payment solutions, microservices, and APIs at companies like{" "}
+              <BioLink href="https://business.woven.finance/login" target="_blank" rel="noopener noreferrer">Woven Finance</BioLink>, and{" "}
+              <BioLink href="https://resource.payrix.com/" target="_blank" rel="noopener noreferrer">Payrix</BioLink>. Along the way I've moved into leadership roles, serving as Founding Software Engineer, and Senior Backend Engineer at Apace Inc. These experiences combined taught me to balance my core engineering tasks -systems architecture, API design, and CI/CD) with the people side of the job — mentoring engineers, building teams, and translating business goals into technical strategy.
+            </>
+          ),
 
-          line3: `Most recently I'm part of a decentralized team of Software Engineers building resilient and innovative systems and in my spare time I mentor students on programming at Lighthouse Labs.`,
+          line3: `Today, I'm the Head of Engineering at Grey Invent, where I lead the engineering team, define our technical strategy, and work cross-functionally with product, design, and business stakeholders to ship reliable, scalable systems.
+          We most recently launched Klout (https://www.kloutco.com), a platform that for creators and influencers to manage their finances and brand partnerships.`,
         }}
         shortdeet={"Technologies I work with"}
         techlist={[
+          {
+                name: <Icon icon={awsIcon} width="30" height="30" />,
+                link: "https://aws.amazon.com",
+              },
           {
             name: <Icon icon={javascriptIcon} width="30" height="30" />,
             link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
@@ -172,6 +184,22 @@ const AboutContent = () => {
             name: <i className="icon-svg" width="30" height="30" />,
             link: "https://developer.mozilla.org/en-US/docs/Web/SVG",
           },
+          {
+                name: <img src={ClaudeIcon} width="30" height="30" alt="Claude" />,
+                link: "https://claude.com",
+              },
+              {
+                name: <img src={AnthropicIcon} width="30" height="30" alt="Anthropic" />,
+                link: "https://www.anthropic.com",
+              },
+              {
+                name: <img src={GeminiIcon} width="30" height="30" alt="Google Gemini" />,
+                link: "https://gemini.google.com",
+              },
+              {
+                name: <Icon icon={openaiIcon} width="30" height="30" />,
+                link: "https://openai.com",
+              },
         ]}
         path={"/"}
       />

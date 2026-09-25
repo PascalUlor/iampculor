@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { heading3, white } from "../variables/index";
+import { heading3, white, tabletMaxWidth, mobileMaxWidth } from "../variables/index";
 
 const ProfileImage = ({ name, image, path }) => (
   <StyledImage>
@@ -43,6 +43,15 @@ const StyledImage = styled.div`
       width: inherit;
       height: inherit;
       object-fit: cover;
+    }
+
+    @media (max-width: ${tabletMaxWidth}) {
+      width: 7rem;
+      height: 7rem;
+    }
+    @media (max-width: ${mobileMaxWidth}) {
+      width: 5rem;
+      height: 5rem;
     }
   }
 

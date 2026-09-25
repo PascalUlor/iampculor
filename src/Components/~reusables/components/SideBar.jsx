@@ -32,6 +32,12 @@ class SidebarContainer extends React.Component {
                 path="/projects"
               />
 
+              <SideNavItem
+                text={sidebarTexts.services}
+                icon={sidebarIcons.services}
+                path="/services"
+              />
+
               {/* <SideNavItem
                 text={sidebarTexts.contact}
                 icon={sidebarIcons.contact}

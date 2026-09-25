@@ -128,16 +128,12 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  
+
   width: 100%;
-  max-height: 300px;
   span.date {
     position: relative;
     display: flex;
     align-items: center;
-  }
-  @media (max-width: 1200px) {
-    margin-bottom: 15rem;
   }
 
   @media (max-width: ${tabletMaxWidth}) {
@@ -203,6 +199,12 @@ const ProjectTitle = styled.div`
   line-height: 1;
   margin-bottom: 0.3em;
   -webkit-font-smoothing: antialiased;
+  @media (max-width: ${tabletMaxWidth}) {
+    font-size: 24px;
+  }
+  @media (max-width: ${mobileMaxWidth}) {
+    font-size: 20px;
+  }
 `;
 
 const Demo = styled.div`

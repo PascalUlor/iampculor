@@ -5,16 +5,23 @@ import {
   tabletMaxWidth,
   mobileMaxWidth,
   largeWidth,
-  extraLargeWidth
+  extraLargeWidth,
+  red,
+  white
 } from "../../~reusables/variables";
 
-const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, details }) => {
+const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, details, resumeUrl }) => {
   return (
     <Card>
       <Content>
         <Description>
           <StyledDetails>
             <BioHeader>{title}</BioHeader>
+            {resumeUrl && (
+              <ResumeButton href={resumeUrl} download target="_blank" rel="noopener noreferrer">
+                Download Resume
+              </ResumeButton>
+            )}
             <Bio>
             <br />
             {details.line1}
@@ -40,11 +47,11 @@ const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, deta
             )}
           </StyledDetails>
         </Description>
-        <MyImage>
+        {/* <MyImage>
         {path && <NavLink to={path}>
         <img src={image} alt="" />
         </NavLink>}
-        </MyImage>
+        </MyImage> */}
       </Content>
     </Card>
   );
@@ -54,16 +61,12 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  
+
   width: 100%;
-  max-height: 300px;
   span.date {
     position: relative;
     display: flex;
     align-items: center;
-  }
-  @media (max-width: 1200px) {
-    margin-bottom: 15rem;
   }
 
   @media (max-width: ${tabletMaxWidth}) {
@@ -94,34 +97,18 @@ const Content = styled.div`
 `;
 
 const Description = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 5px;
-  @media (max-width: 1402px){
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: calc(100vh - 80rem) 0;
-    margin: 2rem auto;
-    margin-bottom: calc(100vh - 40rem);
-}
+
   @media (max-width: ${tabletMaxWidth}) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     padding: 3px;
-    margin: 0 auto;
   }
 
   @media (max-width: ${mobileMaxWidth}) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     padding: 3px;
-    margin: 0 auto;
   }
-  
 `;
 
 const StyledDetails = styled.div`
@@ -131,6 +118,7 @@ const StyledDetails = styled.div`
 
 const Bio = styled.div`
 padding: 0 0 0 20px;
+font-weight: 300;
 line-height: 1.5;
 @media (max-width: ${tabletMaxWidth}) {
     justify-content: center;
@@ -163,6 +151,40 @@ const BioHeader = styled.div`
   line-height: 1;
   margin-bottom: 0.3em;
   -webkit-font-smoothing: antialiased;
+  @media (max-width: ${tabletMaxWidth}) {
+    font-size: 24px;
+  }
+  @media (max-width: ${mobileMaxWidth}) {
+    font-size: 20px;
+  }
+`;
+
+export const BioLink = styled.a`
+  color: ${red};
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+const ResumeButton = styled.a`
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1em;
+  color: ${white};
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  background: ${red};
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.6);
+  }
 `;
 
 const MyImage = styled.div`
@@ -177,6 +199,7 @@ const MyImage = styled.div`
     border-radius: 20px;
     width: 300px;
     height: 300px;
+    max-width: 100%;
     object-fit: cover;
   }
 
@@ -184,19 +207,22 @@ const MyImage = styled.div`
     width: 50%;
   }
 
-  @media (max-width: 1402px){
+  @media (max-width: ${mobileMaxWidth}) {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: ${largeWidth}) {
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     padding: 1rem;
     margin: 2rem auto;
-}
-
-  @media (max-width: ${largeWidth}) {
-    width: 100%;
-    margin-top: 2rem;
   }
+
   @media (max-width: ${tabletMaxWidth}) {
     justify-content: center;
     align-items: center;

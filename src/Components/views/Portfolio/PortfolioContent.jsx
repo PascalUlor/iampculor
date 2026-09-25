@@ -7,6 +7,9 @@ import pythonIcon from "@iconify/icons-logos/python";
 import nodejsIcon from "@iconify/icons-logos/nodejs";
 import reactIcon from "@iconify/icons-logos/react";
 import javascriptIcon from "@iconify/icons-logos/javascript";
+import awsIcon from "@iconify/icons-logos/aws";
+import typescriptIcon from "@iconify/icons-logos/typescript-icon";
+import openaiIcon from "@iconify/icons-logos/openai-icon";
 import reduxIcon from '@iconify/icons-logos/redux';
 import reduxSaga from '@iconify/icons-logos/redux-saga';
 // import expressIcon from "@iconify/icons-logos/express";
@@ -28,14 +31,112 @@ import Politico from "../../~reusables/assets/images/politico.gif";
 import Insatclone from "../../~reusables/assets/images/instaclone.gif";
 import MudGame from "../../~reusables/assets/images/mud.png";
 import Hackton from "../../~reusables/assets/images/hackton.png";
+import ClaraWave from "../../~reusables/assets/images/clarawave.png";
+import Klout from "../../~reusables/assets/images/klout.png";
+import ClaudeIcon from "../../~reusables/assets/images/claude.svg";
+import AnthropicIcon from "../../~reusables/assets/images/anthropic.svg";
+import GeminiIcon from "../../~reusables/assets/images/google-gemini.svg";
 import Divider from "../../~reusables/atoms/Divider";
 import ContentLayout from "../../~reusables/components/ContentLayout";
+import { mobileMaxWidth, red, tabletMaxWidth } from "../../~reusables/variables";
 
 const PortfolioContent = () => {
   return (
     <ContentLayout>
       <ProjectList>
         <ListItem>
+        <SectionHeading>Recent Projects</SectionHeading>
+        <CardItem
+            date={"2026"}
+            image={Klout}
+            title={"Klout"}
+            details={`A platform for creators and influencers to manage their finances and brand partnerships, including AI chat agents built on Claude, Gemini, and ChatGPT. Worked on both the backend and frontend.`}
+            shortdeet={"Technologies"}
+            techlist={[
+              {
+                name: <Icon icon={awsIcon} width="30" height="30" />,
+                link: "https://aws.amazon.com",
+              },
+              {
+                name: <Icon icon={typescriptIcon} width="30" height="30" />,
+                link: "https://www.typescriptlang.org",
+              },
+              {
+                name: <Icon icon={postgresqlIcon} width="30" height="30" />,
+                link: "https://www.postgresql.org",
+              },
+              {
+                name: <Icon icon={gitIcon} width="30" height="30" />,
+                link: "https://git-scm.com",
+              },
+              {
+                name: <Icon icon={nodejsIcon} width="30" height="30" />,
+                link: "https://nodejs.org/en/",
+              },
+              {
+                name: <Icon icon={reactIcon} width="30" height="30" />,
+                link: "https://reactjs.org",
+              },
+              {
+                name: <img src={ClaudeIcon} width="30" height="30" alt="Claude" />,
+                link: "https://claude.com",
+              },
+              {
+                name: <img src={AnthropicIcon} width="30" height="30" alt="Anthropic" />,
+                link: "https://www.anthropic.com",
+              },
+              {
+                name: <img src={GeminiIcon} width="30" height="30" alt="Google Gemini" />,
+                link: "https://gemini.google.com",
+              },
+              {
+                name: <Icon icon={openaiIcon} width="30" height="30" />,
+                link: "https://openai.com",
+              },
+            ]}
+            path={"https://www.kloutco.com/"}
+          />
+
+        <Divider />
+
+        <CardItem
+            date={"2025"}
+            image={ClaraWave}
+            title={"ClaraWave"}
+            details={`An AI-powered platform that automates scheduling, payroll, and billing for home care agencies, helping providers manage shifts, pay caregivers instantly, and stay compliant across private pay, Medicaid, and Medicare.`}
+            shortdeet={"Technologies"}
+            techlist={[
+              {
+                name: <Icon icon={awsIcon} width="30" height="30" />,
+                link: "https://aws.amazon.com",
+              },
+              {
+                name: <Icon icon={apollostackIcon} width="30" height="30" />,
+                link: "https://www.apollographql.com/docs/apollo-server/",
+              },
+              {
+                name: <Icon icon={typescriptIcon} width="30" height="30" />,
+                link: "https://www.typescriptlang.org",
+              },
+              {
+                name: <Icon icon={postgresqlIcon} width="30" height="30" />,
+                link: "https://www.postgresql.org",
+              },
+              {
+                name: <Icon icon={gitIcon} width="30" height="30" />,
+                link: "https://git-scm.com",
+              },
+              {
+                name: <Icon icon={nodejsIcon} width="30" height="30" />,
+                link: "https://nodejs.org/en/",
+              },
+            ]}
+            path={"https://www.clarawave.com/"}
+          />
+
+        <Divider />
+
+        <SectionHeading spaced>Past Projects</SectionHeading>
         <CardItem
             date={"May 2021"}
             image='https://www.loom.com/share/625011cac161465382ffdaf8b9032d7c?sid=be0d53e2-8c37-4009-88bb-1aab34c04895'
@@ -342,13 +443,29 @@ const ProjectList = styled.ul`
   list-style: none;
 `;
 
+const SectionHeading = styled.h2`
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: ${red};
+  margin: ${props => (props.spaced ? "3rem" : "0")} 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid ${red};
+
+  @media (max-width: ${tabletMaxWidth}) {
+    font-size: 1.1rem;
+    margin: ${props => (props.spaced ? "2rem" : "0")} 0 1rem;
+  }
+`;
+
 const ListItem = styled.li`
   display: block;
   margin: 0;
   padding-left: 2rem;
   position: relative;
   overflow: hidden;
-  @media screen and (min-width: 568px) {
+  @media screen and (min-width: ${mobileMaxWidth}) {
     &:first-child {
       padding-top: 0;
       line-height: 1.5;
