@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from 'react-router-dom';
 import {
   tabletMaxWidth,
   mobileMaxWidth,
-  largeWidth,
-  extraLargeWidth,
   red,
   white
 } from "../../~reusables/variables";
@@ -47,11 +44,6 @@ const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, deta
             )}
           </StyledDetails>
         </Description>
-        {/* <MyImage>
-        {path && <NavLink to={path}>
-        <img src={image} alt="" />
-        </NavLink>}
-        </MyImage> */}
       </Content>
     </Card>
   );
@@ -185,59 +177,6 @@ const ResumeButton = styled.a`
   &:hover {
     color: rgba(255, 255, 255, 0.6);
   }
-`;
-
-const MyImage = styled.div`
-  padding: 5px;
-  width: 50%;
-  margin: 5px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  img {
-    border-radius: 20px;
-    width: 300px;
-    height: 300px;
-    max-width: 100%;
-    object-fit: cover;
-  }
-
-  @media (min-width: ${extraLargeWidth}) {
-    width: 50%;
-  }
-
-  @media (max-width: ${mobileMaxWidth}) {
-    img {
-      width: 200px;
-      height: 200px;
-    }
-  }
-
-  @media (max-width: ${largeWidth}) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    margin: 2rem auto;
-  }
-
-  @media (max-width: ${tabletMaxWidth}) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 3px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: ${mobileMaxWidth}) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 3px;
-    margin: 0 auto;
-  } 
 `;
 
 const DetailedList = styled.ul`

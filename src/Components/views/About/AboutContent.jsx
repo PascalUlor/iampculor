@@ -34,8 +34,6 @@ import sequelizeIcon from "@iconify/icons-logos/sequelize";
 import netlifyIcon from "@iconify/icons-logos/netlify";
 import awsIcon from "@iconify/icons-logos/aws";
 import openaiIcon from "@iconify/icons-logos/openai-icon";
-import ClaraWave from "../../~reusables/assets/images/clarawave.png";
-import Klout from "../../~reusables/assets/images/klout.png";
 import ClaudeIcon from "../../~reusables/assets/images/claude.svg";
 import AnthropicIcon from "../../~reusables/assets/images/anthropic.svg";
 import GeminiIcon from "../../~reusables/assets/images/google-gemini.svg";
