@@ -25,6 +25,7 @@ const ContentArea = () => {
       <ButtonWrap>
         <ActionButtons text={"About"} path="/about" />
         <ActionButtons text={"Portfolio"} path="/projects" />
+        <ActionButtons text={"Services"} path="/services" />
       </ButtonWrap>
     </Container>
   );
@@ -83,7 +84,7 @@ const SubHeading = styled.h2`
 
 const ButtonWrap = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 5.15em auto;

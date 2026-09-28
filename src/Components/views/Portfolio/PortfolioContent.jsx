@@ -50,7 +50,7 @@ const PortfolioContent = () => {
             date={"2026"}
             image={Klout}
             title={"Klout"}
-            details={`A platform for creators and influencers to manage their finances and brand partnerships, including AI chat agents built on Claude, Gemini, and ChatGPT. Worked on both the backend and frontend.`}
+            details={`A platform for creators and influencers to manage their finances and brand partnerships, including AI chat bots and agents built using the Claude, Gemini, and ChatGPT APIs. Worked on both the backend and frontend.`}
             shortdeet={"Technologies"}
             techlist={[
               {
@@ -129,6 +129,10 @@ const PortfolioContent = () => {
               {
                 name: <Icon icon={nodejsIcon} width="30" height="30" />,
                 link: "https://nodejs.org/en/",
+              },
+              {
+                name: <Icon icon={reactIcon} width="30" height="30" />,
+                link: "https://reactjs.org",
               },
             ]}
             path={"https://www.clarawave.com/"}
