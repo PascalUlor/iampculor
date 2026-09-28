@@ -39,14 +39,13 @@ import AnthropicIcon from "../../~reusables/assets/images/anthropic.svg";
 import GeminiIcon from "../../~reusables/assets/images/google-gemini.svg";
 import ContentLayout from "../../~reusables/components/ContentLayout";
 import MySection, { BioLink } from "./MySection";
-import aboutpascal from "../../~reusables/assets/images/mypic.png";
 import ContactForm from "./ContactForm";
 
 const AboutContent = () => {
   return (
     <ContentLayout>
       <MySection
-        image={aboutpascal}
+        image={"https://res.cloudinary.com/donpcdocs/image/upload/v1637446189/personal/profilepix.jpg"}
         imh={"50"}
         title={"BIO"}
         resumeUrl={"https://res.cloudinary.com/donpcdocs/image/upload/fl_attachment/v1789813255/personal/Ulor_Pascal_Resume_Updated.pdf"}

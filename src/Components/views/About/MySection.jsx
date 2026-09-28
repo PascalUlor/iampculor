@@ -14,6 +14,9 @@ const MySection = ({ image, title, line1, line2, shortdeet, techlist, path, deta
         <Description>
           <StyledDetails>
             <BioHeader>{title}</BioHeader>
+            <MobileImage>
+              <img src={image} alt="" />
+            </MobileImage>
             {resumeUrl && (
               <ResumeButton href={resumeUrl} download target="_blank" rel="noopener noreferrer">
                 Download Resume
@@ -106,6 +109,23 @@ const Description = styled.div`
 const StyledDetails = styled.div`
   padding: 5px;
   font-weight: 400
+`;
+
+const MobileImage = styled.div`
+  display: none;
+
+  @media (max-width: ${mobileMaxWidth}) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
 `;
 
 const Bio = styled.div`
